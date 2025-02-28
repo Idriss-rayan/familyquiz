@@ -1,6 +1,5 @@
 import 'package:familyquiz/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class WelcomeScreen extends StatelessWidget {
