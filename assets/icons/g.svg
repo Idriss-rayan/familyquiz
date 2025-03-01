@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond du palais -->
+  <rect x="50" y="100" width="400" height="150" fill="#8B5A2B" stroke="#000" stroke-width="3" />
+  
+  <!-- Toits -->
+  <polygon points="50,100 250,30 450,100" fill="#654321" stroke="#000" stroke-width="3" />
+  
+  <!-- Portes principales -->
+  <rect x="220" y="170" width="60" height="80" fill="#3B2F2F" stroke="#000" stroke-width="3" />
+  
+  <!-- Fenêtres -->
+  <rect x="90" y="140" width="40" height="40" fill="#FFF" stroke="#000" stroke-width="3" />
+  <rect x="370" y="140" width="40" height="40" fill="#FFF" stroke="#000" stroke-width="3" />
+  
+  <!-- Détails des piliers -->
+  <rect x="50" y="100" width="20" height="150" fill="#A0522D" stroke="#000" stroke-width="3" />
+  <rect x="430" y="100" width="20" height="150" fill="#A0522D" stroke="#000" stroke-width="3" />
+</svg>
