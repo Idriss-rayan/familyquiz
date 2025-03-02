@@ -1,4 +1,5 @@
 import 'package:familyquiz/constants.dart';
+import 'package:familyquiz/models/Questions.dart';
 import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:websafe_svg/websafe_svg.dart';
@@ -46,6 +47,28 @@ class Body extends StatelessWidget {
                 ),
                 SizedBox(
                   height: kDefaultPadding,
+                ),
+                Container(
+                  padding: EdgeInsets.all(kDefaultPadding),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        sample_data[0]['question'],
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium
+                            ?.copyWith(color: kBlackColor),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: kDefaultPadding),
+                        padding: EdgeInsets.all(kDefaultPadding),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
