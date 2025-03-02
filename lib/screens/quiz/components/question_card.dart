@@ -11,6 +11,7 @@ class QuestionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -28,6 +29,7 @@ class QuestionCard extends StatelessWidget {
           SizedBox(
             height: kDefaultPadding / 2,
           ),
+          option(),
           option(),
           option(),
           option(),
