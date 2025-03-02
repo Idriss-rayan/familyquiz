@@ -15,9 +15,9 @@ class QuestionController extends GetxController
   void onInit() {
     // Our animation duration is 60 s
     // so our plan is to fill the progress bar within 60s
-    _animation =
+    _animationController =
         AnimationController(duration: Duration(seconds: 60), vsync: this);
-    _animation = Tween(begin: 0, end: 1).animate(_animationController)
+    _animation = Tween(begin: 0, end: 1.0).animate(_animationController)
       ..addListener(() {
         // update like setState
         update();
