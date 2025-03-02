@@ -1,3 +1,4 @@
+import 'package:familyquiz/models/Questions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +10,20 @@ class QuestionController extends GetxController
   late Animation _animation;
   // so that we can access our animation outside
   Animation get animation => this._animation;
+
+  List<Question> _questions = sample_data
+      .map(
+        (question) => Question(
+          id: question['id'] ?? 0, // Vérifier null pour l'ID
+          question: question['question'] ?? "No question", // Éviter null
+          options: (question['option'] as List<dynamic>?)?.cast<String>() ??
+              [], // Éviter null
+          answer: question['answer_index'] ?? 0, // Éviter null
+        ),
+      )
+      .toList();
+
+  List<Question> get questions => this._questions;
 
   // called immediately after the widget is allocated memory
   @override

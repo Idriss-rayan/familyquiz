@@ -1,7 +1,9 @@
 import 'package:familyquiz/constants.dart';
+import 'package:familyquiz/controllers/question_controller.dart';
 import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
 import 'package:familyquiz/screens/quiz/components/question_card.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class Body extends StatelessWidget {
@@ -11,6 +13,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    QuestionController _questionController = Get.put(QuestionController());
     return Stack(
       children: [
         WebsafeSvg.asset("assets/icons/bg.svg", fit: BoxFit.fill),
@@ -56,7 +59,10 @@ class Body extends StatelessWidget {
               ),
               Expanded(
                 child: PageView.builder(
-                  itemBuilder: (context, index) => QuestionCard(),
+                  itemCount: _questionController.questions.length,
+                  itemBuilder: (context, index) => QuestionCard(
+                    question: _questionController.questions[index],
+                  ),
                 ),
               ),
             ],
