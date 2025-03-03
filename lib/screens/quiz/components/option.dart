@@ -18,7 +18,7 @@ class option extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            "1. Text",
+            "1. text",
             style: TextStyle(
               color: kGrayColor,
               fontSize: 16,
