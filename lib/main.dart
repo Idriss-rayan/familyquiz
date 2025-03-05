@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Quiz App',
+      title: 'African Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: QuizScreen(),
