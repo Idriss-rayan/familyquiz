@@ -16,7 +16,7 @@ class QuestionController extends GetxController
         (question) => Question(
           id: question['id'] ?? 0, // Vérifier null pour l'ID
           question: question['question'] ?? "No question", // Éviter null
-          options: (question['option'] as List<dynamic>?)?.cast<String>() ??
+          options: (question['options'] as List<dynamic>?)?.cast<String>() ??
               [], // Éviter null
           answer: question['answer_index'] ?? 0, // Éviter null
         ),
@@ -24,6 +24,9 @@ class QuestionController extends GetxController
       .toList();
 
   List<Question> get questions => this._questions;
+
+  bool _answered = false;
+  bool get isAnswered => _answered;
 
   // called immediately after the widget is allocated memory
   @override
