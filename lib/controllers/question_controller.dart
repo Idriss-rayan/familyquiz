@@ -1,4 +1,5 @@
 import 'package:familyquiz/models/Questions.dart';
+import 'package:familyquiz/screens/score/score_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,7 +32,7 @@ class QuestionController extends GetxController
   bool _Answered = false;
   bool get isAnswered => this._Answered;
 
-  late int _correctAns;
+  late int _correctAns = 0;
   int get correctAns => this._correctAns;
 
   late int _selectedAns;
@@ -58,7 +59,8 @@ class QuestionController extends GetxController
       });
 
     // start our animation
-    _animationController.forward();
+    // Once 60s is completed go the next question
+    _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
     super.onInit();
@@ -81,6 +83,14 @@ class QuestionController extends GetxController
     });
   }
 
+  // called just before the controller is deleted from memory
+  @override
+  void onClose() {
+    super.onClose();
+    _animationController.dispose();
+    _pageController.dispose();
+  }
+
   void nextQuestion() {
     if (_questionNumber.value != _questions.length) {
       _Answered = false;
@@ -91,7 +101,15 @@ class QuestionController extends GetxController
       _animationController.reset();
 
       // then start it again
-      _animationController.forward();
+      // Once timer is finish go to the next qn
+      _animationController.forward().whenComplete(nextQuestion);
+    } else {
+      // Get package provide us simple way
+      Get.to(ScoreScreen());
     }
+  }
+
+  void updateTheQnNum(int index) {
+    _questionNumber.value = index + 1;
   }
 }

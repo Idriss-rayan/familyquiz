@@ -48,7 +48,7 @@ class Option extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "${index + 1} $text",
+                  "${index + 1}. $text",
                   style: TextStyle(
                     color: getTheRightColor(), // Appliquer la couleur au texte
                     fontSize: 16,

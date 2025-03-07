@@ -32,22 +32,25 @@ class Body extends StatelessWidget {
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                child: Text.rich(
-                  TextSpan(
-                    text: "Question 1",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineMedium
-                        ?.copyWith(color: kSecondaryColor),
-                    children: [
-                      TextSpan(
-                        text: "/10",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium
-                            ?.copyWith(color: kSecondaryColor),
-                      )
-                    ],
+                child: Obx(
+                  () => Text.rich(
+                    TextSpan(
+                      text:
+                          "Question ${_questionController.questionNumber.value}",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineMedium
+                          ?.copyWith(color: kSecondaryColor),
+                      children: [
+                        TextSpan(
+                          text: "/${_questionController.questions.length}",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
+                              ?.copyWith(color: kSecondaryColor),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -62,6 +65,7 @@ class Body extends StatelessWidget {
                   // block swipe to next qn
                   physics: NeverScrollableScrollPhysics(),
                   controller: _questionController.pageController,
+                  onPageChanged: _questionController.updateTheQnNum,
                   itemCount: _questionController.questions.length,
                   itemBuilder: (context, index) => QuestionCard(
                     question: _questionController.questions[index],
