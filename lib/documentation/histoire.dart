@@ -24,4 +24,12 @@ Après l’assassinat de ce dernier en 1958, Ouandié devient l’un des princip
 Ernest Ouandié prend la tête de la branche armée du parti et mène une résistance dans l’Ouest du pays. Traqué pendant plusieurs années, il est finalement arrêté en 1970. Après un procès, il est condamné à mort et exécuté publiquement à Bafoussam le 15 janvier 1971.
 Aujourd’hui, il est reconnu comme un héros de la lutte pour l’indépendance du Cameroun. Son engagement et son sacrifice restent une source d’inspiration pour de nombreux Camerounais attachés aux valeurs de souveraineté et de justice sociale.
 """;
+
+  static const String milla = """
+Roger Milla, né le 20 mai 1952 à Yaoundé, est l’un des plus grands footballeurs africains de tous les temps. Dès son jeune âge, il montre un talent exceptionnel pour le football et rejoint les clubs locaux avant d’être repéré pour jouer à un niveau plus élevé. Il commence sa carrière professionnelle au Tonnerre de Yaoundé, où il impressionne par sa technique et son sens du but.
+Dans les années 1970, il rejoint la France et évolue dans plusieurs clubs comme Valenciennes, Monaco, Bastia, et Montpellier. En parallèle, il devient un élément clé des Lions Indomptables, l’équipe nationale du Cameroun, avec laquelle il remporte la Coupe d’Afrique des Nations (CAN) en 1984.
+Le moment qui fait de lui une légende arrive lors de la Coupe du Monde 1990 en Italie. À 38 ans, alors qu’il était déjà retraité du football international, il est rappelé par le président Paul Biya pour rejoindre l’équipe nationale. Contre toute attente, il marque quatre buts et mène le Cameroun jusqu’en quart de finale, une première pour une nation africaine. Ses célèbres célébrations de but près du poteau de corner deviennent mythiques.
+Quatre ans plus tard, il revient à la Coupe du Monde 1994, à 42 ans, et marque contre la Russie, devenant ainsi le plus vieux buteur de l’histoire du Mondial, un record toujours inégalé.
+Après sa retraite, Roger Milla s’engage dans des actions humanitaires et de promotion du sport en Afrique. Il est désigné Meilleur joueur africain du siècle par la CAF en 2007 et reste un ambassadeur du football africain. Son impact dépasse le terrain, faisant de lui une icône mondiale et une source d’inspiration pour les générations futures
+ """;
 }
