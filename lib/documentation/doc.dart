@@ -34,7 +34,7 @@ class Doc extends StatelessWidget {
           Color.fromARGB(255, 36, 183, 3),
           Colors.green
         ]),
-        _buildTextPage("assets/icons/foka.png", Name.milla, [
+        _buildTextPage("assets/icons/foka.png", Name.foka, [
           Color.fromARGB(255, 243, 39, 103),
           Color.fromARGB(255, 255, 0, 0),
         ]),

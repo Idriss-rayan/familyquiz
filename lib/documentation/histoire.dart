@@ -32,4 +32,11 @@ Le moment qui fait de lui une légende arrive lors de la Coupe du Monde 1990 en 
 Quatre ans plus tard, il revient à la Coupe du Monde 1994, à 42 ans, et marque contre la Russie, devenant ainsi le plus vieux buteur de l’histoire du Mondial, un record toujours inégalé.
 Après sa retraite, Roger Milla s’engage dans des actions humanitaires et de promotion du sport en Afrique. Il est désigné Meilleur joueur africain du siècle par la CAF en 2007 et reste un ambassadeur du football africain. Son impact dépasse le terrain, faisant de lui une icône mondiale et une source d’inspiration pour les générations futures
  """;
+
+  static const String foka = """
+Alain Foka est un journaliste camerounais de renom, reconnu pour son engagement en faveur d’une information libre et objective. Né au Cameroun, il se passionne très tôt pour les médias et la communication. Après des études en journalisme, il rejoint Radio France Internationale (RFI), où il devient l’une des voix les plus respectées du paysage médiatique africain.
+Sa carrière prend un tournant majeur avec son émission phare "Le Débat Africain", où il analyse les grandes questions politiques, économiques et sociales du continent. Son approche rigoureuse et son engagement pour la vérité lui valent une grande audience et une reconnaissance internationale. Il est également à l’origine de la célèbre émission "Archives d’Afrique", qui retrace l’histoire des grandes figures africaines avec une approche pédagogique et captivante.
+Alain Foka se distingue par son franc-parler et son refus de la complaisance, ce qui lui vaut parfois des critiques, mais aussi un immense respect. À travers ses travaux, il milite pour une Afrique consciente de son histoire et maîtresse de son destin. Il encourage les Africains à s’émanciper des narrations occidentales et à écrire leur propre histoire.
+En dehors de son travail journalistique, Alain Foka est un conférencier influent et un défenseur  de la liberté de la presse. Son engagement pour une Afrique forte et autonome fait de lui une référence incontournable dans le monde des médias. Son impact dépasse les frontières et continue d’inspirer les jeunes générations africaines.
+""";
 }
