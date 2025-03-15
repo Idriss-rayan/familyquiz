@@ -39,4 +39,27 @@ Sa carrière prend un tournant majeur avec son émission phare "Le Débat Africa
 Alain Foka se distingue par son franc-parler et son refus de la complaisance, ce qui lui vaut parfois des critiques, mais aussi un immense respect. À travers ses travaux, il milite pour une Afrique consciente de son histoire et maîtresse de son destin. Il encourage les Africains à s’émanciper des narrations occidentales et à écrire leur propre histoire.
 En dehors de son travail journalistique, Alain Foka est un conférencier influent et un défenseur  de la liberté de la presse. Son engagement pour une Afrique forte et autonome fait de lui une référence incontournable dans le monde des médias. Son impact dépasse les frontières et continue d’inspirer les jeunes générations africaines.
 """;
+
+  static const String beti = """
+Mongo Beti, de son vrai nom Alexandre Biyidi Awala, est né en 1932 à Akometan, au Cameroun. Très tôt, il s’intéresse à la littérature et s’engage dans une critique féroce du colonialisme. Après des études en France, il publie son premier roman, Ville cruelle (1953), sous le pseudonyme d’Eza Boto.
+Son œuvre majeure, Le Pauvre Christ de Bomba (1956), dénonce l’hypocrisie des missionnaires chrétiens et les abus du système colonial. Ce livre lui vaut la censure et des critiques virulentes. Malgré cela, il continue à écrire et publie des romans engagés comme Mission terminée (1957) et Perpétue et l’habitude du malheur (1974), où il s'attaque aux dictatures post-coloniales africaines.
+Exilé en France pendant plusieurs décennies, il enseigne la littérature et écrit de nombreux essais dénonçant la politique néocoloniale et les régimes oppressifs africains. Son engagement politique et intellectuel lui vaut de nombreux ennuis avec les autorités camerounaises.
+En 1991, après l’ouverture politique du Cameroun, Mongo Beti rentre au pays. Il ouvre à Yaoundé la Librairie des Peuples Noirs, un espace dédié à la diffusion de la littérature africaine et à la libre pensée. Jusqu’à sa mort en 2001, il reste un fervent défenseur des droits de l’homme et de la justice sociale, utilisant sa plume comme une arme contre l’oppression.
+Son héritage littéraire et politique continue d’influencer de nombreux écrivains et militants africains.
+""";
+
+  static const String moumie = """
+Félix Moumié est né en 1925 à Foumban, au Cameroun. Il fait ses études en médecine à Dakar avant de s’engager dans la lutte pour l’indépendance de son pays. En 1948, il rejoint l’Union des Populations du Cameroun (UPC), un parti nationaliste fondé par Ruben Um Nyobé pour réclamer la fin de la colonisation française.
+Avec son charisme et son esprit combatif, Félix Moumié devient rapidement l’un des principaux leaders de l’UPC. Lorsque Ruben Um Nyobé est assassiné en 1958 par l’armée coloniale française, il prend la tête du mouvement et poursuit la lutte. Face à la répression violente des autorités françaises et du gouvernement camerounais, il est contraint de s’exiler.
+Depuis l’étranger, il cherche du soutien pour la cause indépendantiste camerounaise. Il voyage en Afrique, en Chine et en Union Soviétique, nouant des alliances avec d’autres mouvements anticoloniaux. Cette activité fait de lui une cible pour la France, qui le considère comme une menace à ses intérêts au Cameroun.
+En 1960, Félix Moumié est piégé à Genève, en Suisse, par un agent des services secrets français. Invité à dîner par William Bechtel, un espion du SDECE (ancêtre de la DGSE), il est empoisonné au thallium, un poison lent et mortel. Après plusieurs jours d’agonie, il meurt le 3 novembre 1960 à l’hôpital de Genève.
+Son assassinat est resté impuni, mais son engagement pour la liberté du Cameroun continue d’inspirer les générations actuelles. Aujourd’hui, Félix Moumié est reconnu comme un héros national et un symbole de la lutte pour l’indépendance et la souveraineté africaine.
+""";
+  static const String um = """
+Félix Moumié est né en 1925 à Foumban, au Cameroun. Il fait ses études en médecine à Dakar avant de s’engager dans la lutte pour l’indépendance de son pays. En 1948, il rejoint l’Union des Populations du Cameroun (UPC), un parti nationaliste fondé par Ruben Um Nyobé pour réclamer la fin de la colonisation française.
+Avec son charisme et son esprit combatif, Félix Moumié devient rapidement l’un des principaux leaders de l’UPC. Lorsque Ruben Um Nyobé est assassiné en 1958 par l’armée coloniale française, il prend la tête du mouvement et poursuit la lutte. Face à la répression violente des autorités françaises et du gouvernement camerounais, il est contraint de s’exiler.
+Depuis l’étranger, il cherche du soutien pour la cause indépendantiste camerounaise. Il voyage en Afrique, en Chine et en Union Soviétique, nouant des alliances avec d’autres mouvements anticoloniaux. Cette activité fait de lui une cible pour la France, qui le considère comme une menace à ses intérêts au Cameroun.
+En 1960, Félix Moumié est piégé à Genève, en Suisse, par un agent des services secrets français. Invité à dîner par William Bechtel, un espion du SDECE (ancêtre de la DGSE), il est empoisonné au thallium, un poison lent et mortel. Après plusieurs jours d’agonie, il meurt le 3 novembre 1960 à l’hôpital de Genève.
+Son assassinat est resté impuni, mais son engagement pour la liberté du Cameroun continue d’inspirer les générations actuelles. Aujourd’hui, Félix Moumié est reconnu comme un héros national et un symbole de la lutte pour l’indépendance et la souveraineté africaine.
+""";
 }

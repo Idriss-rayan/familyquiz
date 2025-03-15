@@ -38,6 +38,19 @@ class Doc extends StatelessWidget {
           Color.fromARGB(255, 243, 39, 103),
           Color.fromARGB(255, 255, 0, 0),
         ]),
+        _buildTextPage("assets/icons/beti.png", Name.beti, [
+          Color.fromARGB(255, 241, 185, 4),
+          Colors.white,
+        ]),
+        _buildTextPage("assets/icons/moumie.png", Name.moumie, [
+          Color.fromARGB(255, 52, 52, 51),
+          Colors.white,
+        ]),
+        _buildTextPage("assets/icons/um.png", Name.um, [
+          Color.fromARGB(255, 18, 92, 2),
+          const Color.fromARGB(255, 154, 4, 4),
+          const Color.fromARGB(255, 229, 244, 12),
+        ]),
       ];
 
   Widget _buildImagePage(String assetPath, Color bgColor) {
