@@ -81,21 +81,30 @@ class Doc extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 30),
+            SizedBox(height: 50),
             _buildImageContainer(imagePath),
             SizedBox(height: 10),
-            Text(
-              name,
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+            Container(
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.black),
+              ),
+              child: Text(
+                name,
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
             ),
             SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
-                padding: EdgeInsets.all(8.0),
+                padding:
+                    EdgeInsets.only(top: 40, left: 18, right: 18, bottom: 18),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
