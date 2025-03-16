@@ -23,30 +23,31 @@ class Doc extends StatelessWidget {
   List<Widget> _buildPages() => [
         _buildImagePage("assets/icons/test1.png", Color(0xFFF2AF04)),
         _buildImagePage("assets/icons/test2.png", Color(0xFF04F177)),
-        _buildTextPage("assets/icons/Ahijo.png", Name.Ahmadou,
+        _buildTextPage("assets/icons/Ahijo.png", Name.Ahmadou, "HAMADOU AHIJO",
             [Colors.white, Colors.grey]),
-        _buildTextPage(
-            "assets/icons/biya.png", Name.Biya, [Colors.white, Colors.blue]),
-        _buildTextPage("assets/icons/ernest.png", Name.ernest,
+        _buildTextPage("assets/icons/biya.png", Name.Biya, "PAUL BIYA",
+            [Colors.white, Colors.blue]),
+        _buildTextPage("assets/icons/ernest.png", Name.ernest, "ERNEST OUNDIE",
             [Color(0xFFD29301), Color(0xFF685201)]),
-        _buildTextPage("assets/icons/milla.png", Name.milla, [
+        _buildTextPage("assets/icons/milla.png", Name.milla, "ROGER MILLA", [
           Color.fromARGB(255, 210, 248, 219),
           Color.fromARGB(255, 36, 183, 3),
           Colors.green
         ]),
-        _buildTextPage("assets/icons/foka.png", Name.foka, [
+        _buildTextPage("assets/icons/foka.png", Name.foka, "ALAIN FOKA", [
           Color.fromARGB(255, 243, 39, 103),
           Color.fromARGB(255, 255, 0, 0),
         ]),
-        _buildTextPage("assets/icons/beti.png", Name.beti, [
+        _buildTextPage("assets/icons/beti.png", Name.beti, "MONGO BETI", [
           Color.fromARGB(255, 241, 185, 4),
           Colors.white,
         ]),
-        _buildTextPage("assets/icons/moumie.png", Name.moumie, [
+        _buildTextPage(
+            "assets/icons/moumie.png", Name.moumie, "FELIX ROLAND MOUMIE", [
           Color.fromARGB(255, 52, 52, 51),
           Colors.white,
         ]),
-        _buildTextPage("assets/icons/um.png", Name.um, [
+        _buildTextPage("assets/icons/um.png", Name.um, "ROBEN UN NYOBE", [
           Color.fromARGB(255, 18, 92, 2),
           const Color.fromARGB(255, 154, 4, 4),
           const Color.fromARGB(255, 229, 244, 12),
@@ -64,7 +65,7 @@ class Doc extends StatelessWidget {
   }
 
   Widget _buildTextPage(
-      String imagePath, String text, List<Color> gradientColors) {
+      String imagePath, String text, String name, List<Color> gradientColors) {
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -80,15 +81,31 @@ class Doc extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _buildImageContainer(imagePath),
             SizedBox(height: 30),
+            _buildImageContainer(imagePath),
+            SizedBox(height: 10),
+            Text(
+              name,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+            ),
+            SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Text(
-                text,
-                style:
-                    TextStyle(fontSize: 18, color: Colors.black, height: 1.5),
-                textAlign: TextAlign.justify,
+              child: Container(
+                padding: EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Text(
+                  text,
+                  style:
+                      TextStyle(fontSize: 18, color: Colors.black, height: 1.5),
+                  textAlign: TextAlign.justify,
+                ),
               ),
             ),
           ],
