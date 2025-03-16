@@ -87,7 +87,7 @@ class Doc extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.transparent,
+                color: Colors.white24,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.black),
               ),
