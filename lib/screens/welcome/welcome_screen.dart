@@ -1,4 +1,5 @@
 import 'package:familyquiz/constants.dart';
+import 'package:familyquiz/documentation/doc.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,23 +45,51 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                InkWell(
-                  onTap: () => Get.to(QuizScreen()),
-                  child: Container(
-                    width: double.infinity,
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(kDefaultPadding * 0.75),
-                    decoration: BoxDecoration(
-                      gradient: kPrimaryGradient,
-                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                Column(
+                  children: [
+                    InkWell(
+                      onTap: () => Get.to(QuizScreen()),
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.all(kDefaultPadding * 0.75),
+                        decoration: BoxDecoration(
+                          gradient: kPrimaryGradient,
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                        ),
+                        child: Text(
+                          "Commencer le Quiz",
+                          style:
+                              Theme.of(context).textTheme.labelLarge?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      "Let's Start Quiz",
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                            color: Colors.black,
-                          ),
+                    // ------------------------------------- //
+                    SizedBox(
+                      height: 25,
                     ),
-                  ),
+                    InkWell(
+                      onTap: () => Get.to(Doc()),
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.all(kDefaultPadding * 0.75),
+                        decoration: BoxDecoration(
+                          gradient: kPrimaryGradient,
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                        ),
+                        child: Text(
+                          "Documentation",
+                          style:
+                              Theme.of(context).textTheme.labelLarge?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Spacer(
                   flex: 2,

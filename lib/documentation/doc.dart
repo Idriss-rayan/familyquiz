@@ -21,8 +21,10 @@ class Doc extends StatelessWidget {
   }
 
   List<Widget> _buildPages() => [
-        _buildImagePage("assets/icons/test1.png", Color(0xFFF2AF04)),
-        _buildImagePage("assets/icons/test2.png", Color(0xFF04F177)),
+        _buildImagePage("assets/icons/test1.png", Color(0xFFF2AF04),
+            "Glisser de droite a gauche"),
+        _buildImagePage("assets/icons/test2.png", Color(0xFF04F177),
+            "commencons avec la documentation"),
         _buildTextPage("assets/icons/Ahijo.png", Name.Ahmadou, "HAMADOU AHIJO",
             [Colors.white, Colors.grey]),
         _buildTextPage("assets/icons/biya.png", Name.Biya, "PAUL BIYA",
@@ -54,12 +56,34 @@ class Doc extends StatelessWidget {
         ]),
       ];
 
-  Widget _buildImagePage(String assetPath, Color bgColor) {
+  Widget _buildImagePage(String assetPath, Color bgColor, String str) {
     return Container(
       width: double.infinity,
       color: bgColor,
-      child: Center(
-        child: Image.asset(assetPath, height: 300, width: 300),
+      child: Column(
+        children: [
+          Center(
+            child: Image.asset(assetPath, height: 300, width: 300),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+              border: Border.all(color: Colors.black),
+              color: Colors.white70,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Text(
+                str,
+                style: TextStyle(
+                  fontSize: 35,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

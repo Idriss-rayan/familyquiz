@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'African Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: Doc(),
+      home: WelcomeScreen(),
     );
   }
 }
