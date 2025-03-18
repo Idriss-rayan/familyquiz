@@ -56,6 +56,7 @@ class Doc extends StatelessWidget {
         ]),
         _buildImagePage("assets/icons/quiz.png",
             Color.fromARGB(255, 4, 210, 242), "Jouer au quiz"),
+        _buttonRacourcci(),
       ];
 
   Widget _buildImagePage(String assetPath, Color bgColor, String str) {
@@ -159,4 +160,34 @@ class Doc extends StatelessWidget {
       width: 300,
     );
   }
+}
+
+Widget _buttonRacourcci() {
+  return Stack(
+    children: [
+      Column(
+        children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  const Color.fromARGB(255, 5, 203, 170),
+                  const Color.fromARGB(255, 4, 247, 186),
+                ],
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.black, Colors.white])),
+            child: Text("Jouer au Quiz"),
+          )
+        ],
+      ),
+    ],
+  );
 }
