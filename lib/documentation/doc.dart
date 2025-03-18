@@ -22,14 +22,14 @@ class Doc extends StatelessWidget {
 
   List<Widget> _buildPages() => [
         _buildImagePage("assets/icons/test1.png", Color(0xFFF2AF04),
-            "Glisser de droite a gauche"),
-        _buildImagePage("assets/icons/test2.png", Color(0xFF04F177),
-            "commencons avec la documentation"),
-        _buildTextPage("assets/icons/Ahijo.png", Name.Ahmadou, "HAMADOU AHIJO",
+            "Glissez de droite à gauche"),
+        _buildImagePage(
+            "assets/icons/test2.png", Color(0xFF04F177), "Commençons"),
+        _buildTextPage("assets/icons/Ahijo.png", Name.Ahmadou, "HAMADOU AHIDJO",
             [Colors.white, Colors.grey]),
         _buildTextPage("assets/icons/biya.png", Name.Biya, "PAUL BIYA",
             [Colors.white, Colors.blue]),
-        _buildTextPage("assets/icons/ernest.png", Name.ernest, "ERNEST OUNDIE",
+        _buildTextPage("assets/icons/ernest.png", Name.ernest, "ERNEST OUANDIÉ",
             [Color(0xFFD29301), Color(0xFF685201)]),
         _buildTextPage("assets/icons/milla.png", Name.milla, "ROGER MILLA", [
           Color.fromARGB(255, 210, 248, 219),
@@ -45,15 +45,17 @@ class Doc extends StatelessWidget {
           Colors.white,
         ]),
         _buildTextPage(
-            "assets/icons/moumie.png", Name.moumie, "FELIX ROLAND MOUMIE", [
+            "assets/icons/moumie.png", Name.moumie, "FÉLIX-ROLAND MOUMIÉ", [
           Color.fromARGB(255, 52, 52, 51),
           Colors.white,
         ]),
-        _buildTextPage("assets/icons/um.png", Name.um, "ROBEN UN NYOBE", [
+        _buildTextPage("assets/icons/um.png", Name.um, "RUBEN UM NYOBÉ", [
           Color.fromARGB(255, 18, 92, 2),
           const Color.fromARGB(255, 154, 4, 4),
           const Color.fromARGB(255, 229, 244, 12),
         ]),
+        _buildImagePage("assets/icons/quiz.png",
+            Color.fromARGB(255, 4, 210, 242), "Jouer au quiz"),
       ];
 
   Widget _buildImagePage(String assetPath, Color bgColor, String str) {
