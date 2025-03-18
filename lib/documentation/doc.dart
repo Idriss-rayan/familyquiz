@@ -121,13 +121,12 @@ class Doc extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.black),
               ),
-              child: Text(
-                name,
-                style: TextStyle(
+              child: Text(name,
+                  style: GoogleFonts.comicNeue(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
+                    color: Colors.black,
+                  )),
             ),
             SizedBox(height: 10),
             Padding(
@@ -141,9 +140,9 @@ class Doc extends StatelessWidget {
                 ),
                 child: Text(
                   text,
-                  style: GoogleFonts.comicNeue(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
                     color: Colors.black,
                   ),
                   textAlign: TextAlign.justify,
