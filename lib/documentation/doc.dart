@@ -1,4 +1,7 @@
+import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:familyquiz/documentation/histoire.dart';
 
@@ -128,7 +131,7 @@ class Doc extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(8.0),
               child: Container(
                 padding:
                     EdgeInsets.only(top: 40, left: 18, right: 18, bottom: 18),
@@ -138,8 +141,11 @@ class Doc extends StatelessWidget {
                 ),
                 child: Text(
                   text,
-                  style:
-                      TextStyle(fontSize: 18, color: Colors.black, height: 1.5),
+                  style: GoogleFonts.comicNeue(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                   textAlign: TextAlign.justify,
                 ),
               ),
@@ -163,33 +169,37 @@ class Doc extends StatelessWidget {
 }
 
 Widget _buttonRacourcci() {
-  return Container(
-    width: double.infinity,
-    height: double.infinity,
-    decoration: BoxDecoration(
-      gradient: LinearGradient(
-        colors: [
-          Color.fromARGB(255, 5, 203, 170),
-          Color.fromARGB(255, 4, 247, 186),
-        ],
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,
-      ),
-    ),
-    child: Center(
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.black, width: 2),
+  return InkWell(
+    splashColor: Colors.blue,
+    onTap: () => Get.to(WelcomeScreen()),
+    child: Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(255, 5, 203, 170),
+            Color.fromARGB(255, 4, 247, 186),
+          ],
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
         ),
-        child: Text(
-          "Jouer au Quiz",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
+      ),
+      child: Center(
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.black, width: 2),
+          ),
+          child: Text(
+            "Menu principal",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
           ),
         ),
       ),
