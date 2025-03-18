@@ -163,31 +163,36 @@ class Doc extends StatelessWidget {
 }
 
 Widget _buttonRacourcci() {
-  return Stack(
-    children: [
-      Column(
-        children: [
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  const Color.fromARGB(255, 5, 203, 170),
-                  const Color.fromARGB(255, 4, 247, 186),
-                ],
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-              ),
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.black, Colors.white])),
-            child: Text("Jouer au Quiz"),
-          )
+  return Container(
+    width: double.infinity,
+    height: double.infinity,
+    decoration: BoxDecoration(
+      gradient: LinearGradient(
+        colors: [
+          Color.fromARGB(255, 5, 203, 170),
+          Color.fromARGB(255, 4, 247, 186),
         ],
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
       ),
-    ],
+    ),
+    child: Center(
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: Colors.black, width: 2),
+        ),
+        child: Text(
+          "Jouer au Quiz",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+      ),
+    ),
   );
 }
