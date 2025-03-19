@@ -5,27 +5,27 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:familyquiz/documentation/histoire.dart';
 
-class Doc extends StatelessWidget {
+class Doc extends StatefulWidget {
   Doc({super.key});
 
   @override
+  State<Doc> createState() => _DocState();
+}
+
+class _DocState extends State<Doc> {
+  final PageController _pagecontroller = PageController();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LiquidSwipe(
-        pages: _buildPages(),
-        fullTransitionValue: 300,
-        enableLoop: false,
-        enableSideReveal: false,
-        slideIconWidget: Icon(Icons.arrow_back_ios, size: 20),
-        waveType: WaveType.liquidReveal,
-        positionSlideIcon: 0.5,
-      ),
-    );
+        body: PageView(
+      children: _buildPages(),
+      physics: BouncingScrollPhysics(),
+    ));
   }
 
   List<Widget> _buildPages() => [
         _buildImagePage("assets/icons/test1.png", Color(0xFFF2AF04),
-            "Glissez de droite à gauche"),
+            "Glissez de droite à gauche pour defiler"),
         _buildImagePage(
             "assets/icons/test2.png", Color(0xFF04F177), "Commençons"),
         _buildTextPage("assets/icons/Ahijo.png", Name.Ahmadou, "HAMADOU AHIDJO",
@@ -57,13 +57,12 @@ class Doc extends StatelessWidget {
           const Color.fromARGB(255, 154, 4, 4),
           const Color.fromARGB(255, 229, 244, 12),
         ]),
-        _buildImagePage("assets/icons/quiz.png",
-            Color.fromARGB(255, 4, 210, 242), "Jouer au quiz"),
         _buttonRacourcci(),
       ];
 
   Widget _buildImagePage(String assetPath, Color bgColor, String str) {
     return Container(
+      padding: EdgeInsets.all(12),
       width: double.infinity,
       color: bgColor,
       child: Column(
@@ -78,7 +77,7 @@ class Doc extends StatelessWidget {
               color: Colors.white70,
             ),
             child: Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.all(20.0),
               child: Text(
                 str,
                 style: TextStyle(

@@ -1,5 +1,6 @@
 import 'package:familyquiz/documentation/doc.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
+import 'package:familyquiz/screens/quiz/utils/overviews.dart';
 import 'package:familyquiz/screens/score/score_screen.dart';
 import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'African Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: WelcomeScreen(),
+      home: Overviews(),
     );
   }
 }
