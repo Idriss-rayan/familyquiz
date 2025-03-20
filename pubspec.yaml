@@ -40,6 +40,7 @@ dependencies:
   websafe_svg: ^3.0.1
 
   get: ^4.7.2
+  supabase_flutter: ^2.8.4
 
 dev_dependencies:
   flutter_test:
