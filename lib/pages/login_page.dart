@@ -20,6 +20,7 @@ class _LoginPageState extends State<LoginPage> {
   void login() async {
     final email = _emailController.text;
     final password = _passwordController.text;
+    print("Email: $email, Password: $password");
 
     //attempt login ...
     try {

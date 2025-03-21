@@ -170,7 +170,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 controller: _passwordController,
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                    labelText: "Confirm Password",
+                                    labelText: "Password",
                                     labelStyle: TextStyle(
                                       color: const Color.fromARGB(
                                           250, 142, 124, 247),
@@ -194,10 +194,10 @@ class _RegisterPageState extends State<RegisterPage> {
                             Container(
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
-                                controller: _passwordController,
+                                controller: _confirmPasswordController,
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                    labelText: "Password",
+                                    labelText: "Confirm Password",
                                     labelStyle: TextStyle(
                                       color: const Color.fromARGB(
                                           250, 142, 124, 247),
@@ -230,7 +230,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 ])),
                             child: Center(
                               child: Text(
-                                "Sign UP",
+                                "Sign Up",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),

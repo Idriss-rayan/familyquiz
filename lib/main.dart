@@ -1,3 +1,4 @@
+import 'package:familyquiz/auth/auth_gate.dart';
 import 'package:familyquiz/documentation/doc.dart';
 import 'package:familyquiz/pages/login_page.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       title: 'African Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: LoginPage(),
+      home: AuthGate(),
     );
   }
 }
