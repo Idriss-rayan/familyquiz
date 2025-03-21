@@ -4,12 +4,12 @@ import 'package:familyquiz/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   // get auth service
   final authService = AuthService();
   //text controllers
@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                             margin: EdgeInsets.only(top: 50),
                             child: Center(
                               child: Text(
-                                "Login",
+                                "Register",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 40,
@@ -204,7 +204,7 @@ class _LoginPageState extends State<LoginPage> {
                     FadeInUp(
                       duration: Duration(milliseconds: 2000),
                       child: InkWell(
-                        onTap: () => Get.to(RegisterPage()),
+                        //onTap: () => Get.to(RegisterPage()),
                         child: Text(
                           "Tap here if you don't have an account?",
                           style: TextStyle(
