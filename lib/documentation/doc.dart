@@ -1,9 +1,11 @@
+import 'package:familyquiz/pages/login_page.dart';
 import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:familyquiz/documentation/histoire.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class Doc extends StatefulWidget {
   Doc({super.key});
@@ -14,6 +16,21 @@ class Doc extends StatefulWidget {
 
 class _DocState extends State<Doc> {
   final PageController _pagecontroller = PageController();
+  // logout
+  void signout() async {
+    try {
+      await Supabase.instance.client.auth.signOut();
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text("Déconnexion réussie !")));
+
+      // Rediriger vers l'écran de connexion (ou tout autre écran)
+      Get.off(LoginPage());
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Erreur lors de la déconnexion : $e")));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,60 +112,87 @@ class _DocState extends State<Doc> {
 
   Widget _buildTextPage(
       String imagePath, String text, String name, List<Color> gradientColors) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: gradientColors,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomCenter,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 182, 224, 241),
+        elevation: 30,
+        shadowColor: Colors.black,
+        leading: IconButton(
+          onPressed: signout,
+          icon: Icon(
+            Icons.logout,
+            color: Colors.blueGrey,
+          ),
         ),
+        actions: [
+          // Icône profil à droite
+          IconButton(
+            onPressed: () {},
+            icon: Padding(
+              padding: const EdgeInsets.only(right: 15),
+              child: Icon(
+                Icons.person,
+                color: Colors.blueGrey,
+              ),
+            ),
+          ),
+        ],
       ),
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 50),
-            _buildImageContainer(imagePath),
-            SizedBox(height: 10),
-            Container(
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.white24,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.black),
-              ),
-              child: Text(name,
-                  style: GoogleFonts.comicNeue(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  )),
-            ),
-            SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                padding:
-                    EdgeInsets.only(top: 40, left: 18, right: 18, bottom: 18),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: gradientColors,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _buildImageContainer(imagePath),
+              SizedBox(height: 10),
+              Container(
+                padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.white24,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.black),
                 ),
-                child: Text(
-                  text,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black,
+                child: Text(name,
+                    style: GoogleFonts.comicNeue(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    )),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  padding:
+                      EdgeInsets.only(top: 40, left: 18, right: 18, bottom: 18),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  textAlign: TextAlign.justify,
+                  child: Text(
+                    text,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.justify,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
