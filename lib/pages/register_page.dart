@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:familyquiz/auth/auth_service.dart';
 import 'package:familyquiz/pages/login_page.dart';
-import 'package:familyquiz/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -216,28 +215,29 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 30,
                     ),
                     FadeInUp(
-                        duration: Duration(milliseconds: 1900),
-                        child: InkWell(
-                          splashColor: const Color.fromARGB(255, 172, 172, 222),
-                          onTap: signUp,
-                          child: Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                gradient: LinearGradient(colors: [
-                                  Color.fromRGBO(143, 148, 251, 1),
-                                  Color.fromRGBO(143, 148, 251, .6),
-                                ])),
-                            child: Center(
-                              child: Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                      duration: Duration(milliseconds: 1900),
+                      child: InkWell(
+                        splashColor: const Color.fromARGB(255, 172, 172, 222),
+                        onTap: signUp,
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              gradient: LinearGradient(colors: [
+                                Color.fromRGBO(143, 148, 251, 1),
+                                Color.fromRGBO(143, 148, 251, .6),
+                              ])),
+                          child: Center(
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
-                        )),
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       height: 70,
                     ),

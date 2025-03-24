@@ -3,7 +3,6 @@ import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:familyquiz/documentation/histoire.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

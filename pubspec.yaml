@@ -53,7 +53,7 @@ flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/images/sp.png"
-  remove_alpha_ios: true
+  
 
 flutter_native_splash:
   color: "#E8F2FC"

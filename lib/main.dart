@@ -1,10 +1,4 @@
 import 'package:familyquiz/auth/auth_gate.dart';
-import 'package:familyquiz/documentation/doc.dart';
-import 'package:familyquiz/pages/login_page.dart';
-import 'package:familyquiz/screens/quiz/quiz_screen.dart';
-import 'package:familyquiz/screens/quiz/utils/overviews.dart';
-import 'package:familyquiz/screens/score/score_screen.dart';
-import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
