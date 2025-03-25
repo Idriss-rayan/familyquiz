@@ -42,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
     catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Error: $e")));
+            .showSnackBar(SnackBar(content: Text("erreur: $e")));
       }
     }
   }
