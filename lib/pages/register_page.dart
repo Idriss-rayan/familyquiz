@@ -110,7 +110,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             margin: EdgeInsets.only(top: 50),
                             child: Center(
                               child: Text(
-                                "Register",
+                                "Inscription",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 40,
