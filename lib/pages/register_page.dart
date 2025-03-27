@@ -26,7 +26,7 @@ class _RegisterPageState extends State<RegisterPage> {
     // check that password match
     if (password != confirmPassword) {
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("passwords don't match")));
+          .showSnackBar(const SnackBar(content: Text("password not match")));
       return;
     }
 
