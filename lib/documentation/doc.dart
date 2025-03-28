@@ -20,7 +20,7 @@ class _DocState extends State<Doc> {
     try {
       await Supabase.instance.client.auth.signOut();
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("Déconnexion réussie !")));
+          .showSnackBar(const SnackBar(content: Text("Déconnexion réussi !")));
 
       // Rediriger vers l'écran de connexion (ou tout autre écran)
       Get.off(LoginPage());
