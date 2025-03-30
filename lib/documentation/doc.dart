@@ -235,7 +235,7 @@ Widget _buttonRacourcci() {
             border: Border.all(color: Colors.black, width: 2),
           ),
           child: Text(
-            "Menu principal",
+            "Menu principa",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
