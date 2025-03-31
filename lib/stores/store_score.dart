@@ -30,7 +30,7 @@ class _StoreScoreState extends State<StoreScore> {
 
       // Récupérer le dernier score de l'utilisateur
       final response = await supabase
-          .from('scores')
+          .from('score')
           .select('score')
           .eq('user_id', user.id)
           .order('created_at', ascending: false)
