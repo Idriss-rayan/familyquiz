@@ -45,9 +45,7 @@ class StartScreen extends StatelessWidget {
             Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () {
-                  Get.to(Doc());
-                },
+                onTap: () {},
                 child: Buttons(name: "Carrière"),
               ),
             ),
