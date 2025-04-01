@@ -19,23 +19,23 @@ class progressBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(50),
       ),
       child: GetBuilder<QuestionController>(
-          init: QuestionController(),
-          builder: (controller) {
-            print(controller.animation.value);
-            return Stack(
-              children: [
-                // layoutbuilder provide us available space for the container
-                LayoutBuilder(
-                  builder: (context, constraints) => Container(
-                    width: constraints.maxWidth * controller.animation.value,
-                    decoration: BoxDecoration(
-                      gradient: kPrimaryGradient,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
+        init: QuestionController(),
+        builder: (controller) {
+          print(controller.animation.value);
+          return Stack(
+            children: [
+              // layoutbuilder provide us available space for the container
+              LayoutBuilder(
+                builder: (context, constraints) => Container(
+                  width: constraints.maxWidth * controller.animation.value,
+                  decoration: BoxDecoration(
+                    gradient: kPrimaryGradient,
+                    borderRadius: BorderRadius.circular(50),
                   ),
                 ),
-                Positioned.fill(
-                    child: Padding(
+              ),
+              Positioned.fill(
+                child: Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: kDefaultPadding / 2),
                   child: Row(
@@ -45,10 +45,12 @@ class progressBar extends StatelessWidget {
                       WebsafeSvg.asset("assets/icons/clock.svg"),
                     ],
                   ),
-                ))
-              ],
-            );
-          }),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
