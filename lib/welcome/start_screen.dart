@@ -39,7 +39,15 @@ class StartScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 100),
+            SizedBox(height: 20),
+
+            Text(
+              "Quiz",
+              style: GoogleFonts.ptSerif(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             // buttons ...
             Spacer(),
             Material(
