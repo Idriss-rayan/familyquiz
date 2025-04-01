@@ -50,7 +50,14 @@ class StartScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Buttons(name: "Compétition"),
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                splashColor: const Color.fromARGB(255, 43, 2, 79),
+                onTap: () {},
+                child: Buttons(name: "Compétition"),
+              ),
+            ),
             SizedBox(height: 20),
             Material(
               color: Colors.transparent,
@@ -63,9 +70,23 @@ class StartScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Buttons(name: "Survie"),
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                splashColor: Colors.white,
+                onTap: () {},
+                child: Buttons(name: "Survie"),
+              ),
+            ),
             SizedBox(height: 20),
-            Buttons(name: "Contre-la-Montre"),
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                splashColor: Colors.white,
+                onTap: () {},
+                child: Buttons(name: "Contre-La-Montre"),
+              ),
+            ),
           ],
         ),
       ),
