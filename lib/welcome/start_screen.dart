@@ -42,11 +42,14 @@ class StartScreen extends StatelessWidget {
             SizedBox(height: 100),
             // buttons ...
             Spacer(),
-            InkWell(
-              onTap: () {
-                Get.to(Doc());
-              },
-              child: Buttons(name: "Carrière"),
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {
+                  Get.to(Doc());
+                },
+                child: Buttons(name: "Carrière"),
+              ),
             ),
             SizedBox(height: 20),
             Buttons(name: "Compétition"),
