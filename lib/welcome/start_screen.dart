@@ -1,4 +1,5 @@
 import 'package:familyquiz/documentation/doc.dart';
+import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:familyquiz/welcome/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,19 +11,6 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        shadowColor: const Color.fromARGB(255, 159, 33, 243),
-        elevation: 40,
-        backgroundColor: const Color.fromARGB(255, 47, 2, 84),
-        title: Center(
-            child: Text(
-          "Preference",
-          style: GoogleFonts.comicNeue(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
-        )),
-      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -39,21 +27,33 @@ class StartScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 80),
 
-            Text(
-              "Quiz",
-              style: GoogleFonts.ptSerif(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Quiz",
+                  style: GoogleFonts.ptSerif(
+                    fontSize: 80,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text("Game"),
+              ],
             ),
             // buttons ...
             Spacer(),
             Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.to(
+                    WelcomeScreen(),
+                    transition: Transition.circularReveal,
+                    duration: Duration(milliseconds: 2000),
+                  );
+                },
                 child: Buttons(name: "Carrière"),
               ),
             ),
@@ -72,7 +72,11 @@ class StartScreen extends StatelessWidget {
               child: InkWell(
                 splashColor: Colors.white,
                 onTap: () {
-                  Get.to(Doc());
+                  Get.to(
+                    Doc(),
+                    transition: Transition.circularReveal,
+                    duration: Duration(milliseconds: 2000),
+                  );
                 },
                 child: Buttons(name: "Documentation"),
               ),
