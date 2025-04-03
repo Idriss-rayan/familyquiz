@@ -11,7 +11,7 @@ class Question {
   });
 }
 
-const List sample_data = [
+const List<Map<String, dynamic>> sample_data = [
   {
     "id": 1,
     "question":

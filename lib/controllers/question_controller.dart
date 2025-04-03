@@ -6,10 +6,12 @@ import 'package:get/get.dart';
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
+  //declaration des variables d'animations
   late AnimationController _animationController;
   late Animation _animation;
   Animation get animation => this._animation;
 
+  //gestion des pages ... genre controllent les pages du quiz, permetteent de passer d'une page a l'autre
   late PageController _pageController;
   PageController get pageController => this._pageController;
 
