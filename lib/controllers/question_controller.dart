@@ -59,6 +59,7 @@ class QuestionController extends GetxController
     _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
+    _questions.shuffle();
     super.onInit();
   }
 
@@ -95,7 +96,7 @@ class QuestionController extends GetxController
       } while (_askedQuestions.contains(nextIndex));
 
       _askedQuestions.add(nextIndex);
-      _questionNumber.value = nextIndex + 1;
+      _questionNumber.value = nextIndex;
 
       _pageController.jumpToPage(nextIndex);
 
