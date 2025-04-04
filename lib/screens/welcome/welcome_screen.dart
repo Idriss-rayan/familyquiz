@@ -1,9 +1,9 @@
-import 'package:familyquiz/constants.dart';
-import 'package:familyquiz/documentation/doc.dart';
+import 'package:familyquiz/screens/quiz/components/question_card.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
+import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:websafe_svg/websafe_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -11,93 +11,48 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          WebsafeSvg.asset(
-            "assets/icons/bg.svg",
-            fit: BoxFit.fill,
+      backgroundColor: const Color(0xFFF9F6FF),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 223, 132, 250),
+              Color.fromARGB(255, 74, 3, 95),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.center,
           ),
-          SafeArea(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Spacer(
-                  flex: 2,
+        ),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              FancyButton(
+                text: "Commencer",
+                onTap: () {
+                  Get.to(
+                    QuizScreen(),
+                    transition: Transition.rightToLeft,
+                    duration: const Duration(milliseconds: 1000),
+                  );
+                },
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF9C27B0), Color(0xFFE040FB)],
                 ),
-                Text(
-                  "Let's play Quiz,",
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+              ),
+              const SizedBox(height: 20),
+              FancyButton(
+                text: "Retour",
+                onTap: () {},
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
                 ),
-                Text("Enter your information below"),
-                Spacer(),
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xff1c2341),
-                    hintText: "Full Name",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                  ),
-                ),
-                Spacer(),
-                Column(
-                  children: [
-                    InkWell(
-                      onTap: () => Get.to(QuizScreen()),
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(kDefaultPadding * 0.75),
-                        decoration: BoxDecoration(
-                          gradient: kPrimaryGradient,
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: Text(
-                          "Commencer le Quiz",
-                          style:
-                              Theme.of(context).textTheme.labelLarge?.copyWith(
-                                    color: Colors.black,
-                                  ),
-                        ),
-                      ),
-                    ),
-                    // ------------------------------------- //
-                    SizedBox(
-                      height: 25,
-                    ),
-                    InkWell(
-                      onTap: () => Get.to(Doc()),
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(kDefaultPadding * 0.75),
-                        decoration: BoxDecoration(
-                          gradient: kPrimaryGradient,
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: Text(
-                          "Documentation",
-                          style:
-                              Theme.of(context).textTheme.labelLarge?.copyWith(
-                                    color: Colors.black,
-                                  ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Spacer(
-                  flex: 2,
-                ),
-              ],
-            ),
-          ))
-        ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

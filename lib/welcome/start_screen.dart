@@ -1,9 +1,10 @@
-import 'package:familyquiz/documentation/doc.dart';
-import 'package:familyquiz/screens/welcome/welcome_screen.dart';
-import 'package:familyquiz/welcome/buttons.dart';
+import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:familyquiz/documentation/doc.dart';
+import 'package:familyquiz/screens/welcome/welcome_screen.dart';
+// 👈 Import du bouton stylé
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -14,11 +15,11 @@ class StartScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              const Color.fromARGB(255, 223, 132, 250),
-              const Color.fromARGB(255, 74, 3, 95)
+              Color.fromARGB(255, 223, 132, 250),
+              Color.fromARGB(255, 74, 3, 95)
             ],
             begin: Alignment.topLeft,
             end: Alignment.center,
@@ -27,8 +28,7 @@ class StartScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 80),
-
+            const SizedBox(height: 80),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -37,68 +37,64 @@ class StartScreen extends StatelessWidget {
                   style: GoogleFonts.ptSerif(
                     fontSize: 80,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
-                Text("Game"),
+                const Text(
+                  " Game",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white70,
+                  ),
+                ),
               ],
             ),
-            // buttons ...
-            Spacer(),
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: () {
-                  Get.to(
-                    WelcomeScreen(),
-                    transition: Transition.circularReveal,
-                    duration: Duration(milliseconds: 2000),
-                  );
-                },
-                child: Buttons(name: "Carrière"),
+            const Spacer(),
+            FancyButton(
+              text: "Carrière",
+              onTap: () {
+                Get.to(
+                  const WelcomeScreen(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 1000),
+                );
+              },
+              gradient: const LinearGradient(
+                colors: [Color(0xFF9C27B0), Color(0xFFE040FB)],
               ),
             ),
-            SizedBox(height: 20),
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                splashColor: const Color.fromARGB(255, 43, 2, 79),
-                onTap: () {},
-                child: Buttons(name: "Compétition"),
+            const SizedBox(height: 20),
+            FancyButton(
+              text: "Compétition",
+              onTap: () {},
+              gradient: const LinearGradient(
+                colors: [Color(0xFF8E24AA), Color(0xFFD500F9)],
               ),
             ),
-            SizedBox(height: 20),
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                splashColor: Colors.white,
-                onTap: () {
-                  Get.to(
-                    Doc(),
-                    transition: Transition.circularReveal,
-                    duration: Duration(milliseconds: 2000),
-                  );
-                },
-                child: Buttons(name: "Documentation"),
+            const SizedBox(height: 20),
+            FancyButton(
+              text: "Documentation",
+              onTap: () {
+                Get.to(
+                  Doc(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 1000),
+                );
+              },
+              gradient: const LinearGradient(
+                colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
               ),
             ),
-            SizedBox(height: 20),
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                splashColor: Colors.white,
-                onTap: () {},
-                child: Buttons(name: "Survie"),
+            const SizedBox(height: 20),
+            FancyButton(
+              text: "Profile et rang",
+              onTap: () {},
+              gradient: const LinearGradient(
+                colors: [Color(0xFF4A148C), Color(0xFF7B1FA2)],
               ),
             ),
-            SizedBox(height: 20),
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                splashColor: Colors.white,
-                onTap: () {},
-                child: Buttons(name: "Contre-La-Montre"),
-              ),
-            ),
+            const SizedBox(height: 20),
+            const SizedBox(height: 50),
           ],
         ),
       ),
