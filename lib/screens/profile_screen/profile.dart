@@ -12,11 +12,11 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  void signout() async {
+  void signOut() async {
     try {
       await Supabase.instance.client.auth.signOut();
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("Déconnexion réussi!")));
+          .showSnackBar(const SnackBar(content: Text("Déconnexion réussie!")));
 
       // Rediriger vers l'écran de connexion (ou tout autre écran)
       Get.off(LoginPage());
@@ -67,13 +67,13 @@ class _ProfileState extends State<Profile> {
                             color: Colors.white,
                             width: 1,
                           )),
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         size: 130,
                       ),
                     ),
                     const SizedBox(height: 20),
-                    Text(
+                    const Text(
                       "UserName",
                       style: TextStyle(
                         fontSize: 30,
@@ -93,7 +93,7 @@ class _ProfileState extends State<Profile> {
               ),
               const SizedBox(height: 20),
               FancyButton(
-                text: "Statistique",
+                text: "Statistiques",
                 onTap: () {},
                 gradient: const LinearGradient(
                   colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
@@ -101,9 +101,9 @@ class _ProfileState extends State<Profile> {
               ),
               const SizedBox(height: 20),
               FancyButton(
-                text: "Deconexion",
+                text: "Déconnexion",
                 onTap: () {
-                  signout();
+                  signOut();
                 },
                 gradient: const LinearGradient(
                   colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
@@ -111,7 +111,7 @@ class _ProfileState extends State<Profile> {
               ),
               const SizedBox(height: 20),
               FancyButton(
-                text: "Suprimer compte",
+                text: "Delete Account",
                 onTap: () {},
                 gradient: const LinearGradient(
                   colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
