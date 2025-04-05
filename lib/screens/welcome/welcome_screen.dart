@@ -1,6 +1,7 @@
 import 'package:familyquiz/screens/quiz/components/question_card.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
+import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,11 +33,7 @@ class WelcomeScreen extends StatelessWidget {
               FancyButton(
                 text: "Commencer",
                 onTap: () {
-                  Get.to(
-                    QuizScreen(),
-                    transition: Transition.rightToLeft,
-                    duration: const Duration(milliseconds: 1000),
-                  );
+                  Get.back();
                 },
                 gradient: const LinearGradient(
                   colors: [Color(0xFF9C27B0), Color(0xFFE040FB)],
@@ -45,7 +42,11 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
               FancyButton(
                 text: "Retour",
-                onTap: () {},
+                onTap: () {
+                  Get.to(StartScreen(),
+                      transition: Transition.leftToRight,
+                      duration: const Duration(microseconds: 1000));
+                },
                 gradient: const LinearGradient(
                   colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
                 ),
