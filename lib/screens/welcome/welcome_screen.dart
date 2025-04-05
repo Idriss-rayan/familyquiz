@@ -33,7 +33,11 @@ class WelcomeScreen extends StatelessWidget {
               FancyButton(
                 text: "Commencer",
                 onTap: () {
-                  Get.back();
+                  Get.to(
+                    QuizScreen(),
+                    transition: Transition.rightToLeft,
+                    duration: const Duration(milliseconds: 1000),
+                  );
                 },
                 gradient: const LinearGradient(
                   colors: [Color(0xFF9C27B0), Color(0xFFE040FB)],
@@ -43,9 +47,7 @@ class WelcomeScreen extends StatelessWidget {
               FancyButton(
                 text: "Retour",
                 onTap: () {
-                  Get.to(StartScreen(),
-                      transition: Transition.leftToRight,
-                      duration: const Duration(microseconds: 1000));
+                  Get.back();
                 },
                 gradient: const LinearGradient(
                   colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],

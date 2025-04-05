@@ -1,5 +1,6 @@
 import 'package:familyquiz/pages/login_page.dart';
 import 'package:familyquiz/screens/welcome/welcome_screen.dart';
+import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -113,31 +114,31 @@ class _DocState extends State<Doc> {
       String imagePath, String text, String name, List<Color> gradientColors) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 182, 224, 241),
-        elevation: 30,
-        shadowColor: Colors.black,
-        leading: IconButton(
-          onPressed: signout,
-          icon: Icon(
-            Icons.logout,
-            color: Colors.blueGrey,
-          ),
-        ),
-        actions: [
-          // Icône profil à droite
-          IconButton(
-            onPressed: () {},
-            icon: Padding(
-              padding: const EdgeInsets.only(right: 15),
-              child: Icon(
-                Icons.person,
-                color: Colors.blueGrey,
-              ),
-            ),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: const Color.fromARGB(255, 182, 224, 241),
+      //   elevation: 30,
+      //   shadowColor: Colors.black,
+      //   leading: IconButton(
+      //     onPressed: signout,
+      //     icon: Icon(
+      //       Icons.logout,
+      //       color: Colors.blueGrey,
+      //     ),
+      //   ),
+      //   actions: [
+      //     // Icône profil à droite
+      //     IconButton(
+      //       onPressed: () {},
+      //       icon: Padding(
+      //         padding: const EdgeInsets.only(right: 15),
+      //         child: Icon(
+      //           Icons.person,
+      //           color: Colors.blueGrey,
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -153,6 +154,7 @@ class _DocState extends State<Doc> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 50),
               _buildImageContainer(imagePath),
               SizedBox(height: 10),
               Container(
@@ -210,23 +212,27 @@ class _DocState extends State<Doc> {
 }
 
 Widget _buttonRacourcci() {
-  return InkWell(
-    splashColor: Colors.blue,
-    onTap: () => Get.to(WelcomeScreen()),
-    child: Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 5, 203, 170),
-            Color.fromARGB(255, 4, 247, 186),
-          ],
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-        ),
+  return Container(
+    width: double.infinity,
+    height: double.infinity,
+    decoration: BoxDecoration(
+      gradient: LinearGradient(
+        colors: [
+          Color.fromARGB(255, 5, 203, 170),
+          Color.fromARGB(255, 4, 247, 186),
+        ],
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
       ),
-      child: Center(
+    ),
+    child: Center(
+      child: InkWell(
+        splashColor: Colors.red,
+        onTap: () => Get.offAll(
+          StartScreen(),
+          transition: Transition.rightToLeft,
+          duration: Duration(milliseconds: 1000),
+        ),
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           decoration: BoxDecoration(

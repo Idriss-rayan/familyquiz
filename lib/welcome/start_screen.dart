@@ -1,8 +1,9 @@
+import 'package:familyquiz/documentation/choose_page.dart';
+import 'package:familyquiz/screens/profile_screen/profile.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:familyquiz/documentation/doc.dart';
 import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 // 👈 Import du bouton stylé
 
@@ -55,7 +56,7 @@ class StartScreen extends StatelessWidget {
               onTap: () {
                 Get.to(
                   const WelcomeScreen(),
-                  transition: Transition.rightToLeft,
+                  transition: Transition.rightToLeftWithFade,
                   duration: const Duration(milliseconds: 1000),
                 );
               },
@@ -76,8 +77,8 @@ class StartScreen extends StatelessWidget {
               text: "Documentation",
               onTap: () {
                 Get.to(
-                  Doc(),
-                  transition: Transition.rightToLeft,
+                  ChoosePage(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: const Duration(milliseconds: 1000),
                 );
               },
@@ -88,7 +89,13 @@ class StartScreen extends StatelessWidget {
             const SizedBox(height: 20),
             FancyButton(
               text: "Profile et rang",
-              onTap: () {},
+              onTap: () {
+                Get.to(
+                  Profile(),
+                  transition: Transition.rightToLeftWithFade,
+                  duration: const Duration(milliseconds: 1000),
+                );
+              },
               gradient: const LinearGradient(
                 colors: [Color(0xFF4A148C), Color(0xFF7B1FA2)],
               ),
