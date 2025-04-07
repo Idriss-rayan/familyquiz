@@ -1,5 +1,4 @@
 import 'package:familyquiz/documentation/choose_page.dart';
-import 'package:familyquiz/documentation/gridview.dart';
 import 'package:familyquiz/screens/profile_screen/profile.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';

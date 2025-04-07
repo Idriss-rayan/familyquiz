@@ -1,10 +1,7 @@
-import 'package:familyquiz/screens/quiz/components/question_card.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
-import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

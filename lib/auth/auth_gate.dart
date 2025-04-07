@@ -1,4 +1,3 @@
-import 'package:familyquiz/documentation/doc.dart';
 import 'package:familyquiz/pages/login_page.dart';
 import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';

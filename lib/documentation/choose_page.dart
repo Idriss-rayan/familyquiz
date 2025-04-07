@@ -1,11 +1,9 @@
 import 'package:familyquiz/documentation/doc.dart';
 import 'package:familyquiz/documentation/gridview.dart';
-import 'package:familyquiz/screens/profile_screen/profile.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 // 👈 Import du bouton stylé
 
 class ChoosePage extends StatelessWidget {

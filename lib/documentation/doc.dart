@@ -1,5 +1,4 @@
 import 'package:familyquiz/pages/login_page.dart';
-import 'package:familyquiz/screens/welcome/welcome_screen.dart';
 import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
