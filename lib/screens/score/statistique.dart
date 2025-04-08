@@ -11,7 +11,10 @@ class Statistique extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListWheelScrollView(
         itemExtent: 250,
-        physics: const FixedExtentScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
+        //useMagnifier: true,
+        //magnification: 1.2,
+        //physics: const FixedExtentScrollPhysics(),
         children: [
           Container(
             child: Text(
@@ -42,7 +45,7 @@ class Statistique extends StatelessWidget {
             ),
             child: const Hero(
               tag: 'hero2',
-              child: NewWidget(title: 'niveau 1', value: '0 sur 5'),
+              child: NewWidget(title: 'niveau 2', value: '0 sur 5'),
             ),
           ),
           InkWell(
@@ -53,7 +56,7 @@ class Statistique extends StatelessWidget {
             ),
             child: const Hero(
               tag: 'hero3',
-              child: NewWidget(title: 'niveau 1', value: '0 sur 5'),
+              child: NewWidget(title: 'niveau 3', value: '0 sur 5'),
             ),
           ),
           InkWell(
@@ -64,7 +67,7 @@ class Statistique extends StatelessWidget {
             ),
             child: const Hero(
               tag: 'hero4',
-              child: NewWidget(title: 'niveau 1', value: '0 sur 5'),
+              child: NewWidget(title: 'niveau 4', value: '0 sur 5'),
             ),
           ),
           InkWell(
@@ -75,7 +78,7 @@ class Statistique extends StatelessWidget {
             ),
             child: const Hero(
               tag: 'hero5',
-              child: NewWidget(title: 'niveau 1', value: '0 sur 5'),
+              child: NewWidget(title: 'niveau 5', value: '0 sur 5'),
             ),
           ),
         ],
@@ -208,8 +211,8 @@ class Gamepage2 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   gradient: LinearGradient(
                     colors: [
-                      const Color.fromARGB(255, 231, 212, 4),
-                      const Color.fromARGB(255, 82, 2, 90),
+                      const Color.fromARGB(255, 19, 46, 223),
+                      const Color.fromARGB(255, 3, 128, 238),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.center,
@@ -240,8 +243,8 @@ class Gamepage3 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   gradient: LinearGradient(
                     colors: [
-                      const Color.fromARGB(255, 231, 212, 4),
-                      const Color.fromARGB(255, 82, 2, 90),
+                      const Color.fromARGB(255, 245, 112, 112),
+                      const Color.fromARGB(255, 228, 5, 5),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.center,
@@ -272,8 +275,8 @@ class Gamepage4 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   gradient: LinearGradient(
                     colors: [
-                      const Color.fromARGB(255, 231, 212, 4),
-                      const Color.fromARGB(255, 82, 2, 90),
+                      const Color.fromARGB(255, 67, 243, 3),
+                      const Color.fromARGB(255, 7, 230, 145),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.center,
@@ -304,8 +307,8 @@ class Gamepage5 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   gradient: LinearGradient(
                     colors: [
-                      const Color.fromARGB(255, 231, 212, 4),
-                      const Color.fromARGB(255, 82, 2, 90),
+                      const Color.fromARGB(255, 51, 230, 250),
+                      const Color.fromARGB(255, 98, 140, 248),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.center,
