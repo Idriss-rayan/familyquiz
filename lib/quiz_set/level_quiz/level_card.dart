@@ -13,7 +13,7 @@ class LevelCard extends StatelessWidget {
       body: ListView.builder(
         itemCount: 3,
         itemBuilder: (context, index) {
-          return Level();
+          return Scaffold(body: Level());
         },
       ),
     );

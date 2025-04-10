@@ -15,7 +15,8 @@ class Level extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.blueAccent,
+          gradient:
+              LinearGradient(colors: [Color(0xFF6A1B9A), Color(0xFFAB47BC)]),
           borderRadius: BorderRadius.circular(0),
         ),
         child: Stack(
