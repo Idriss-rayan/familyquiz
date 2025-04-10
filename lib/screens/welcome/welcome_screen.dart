@@ -1,5 +1,5 @@
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
-import 'package:familyquiz/screens/score/statistique.dart';
+import 'package:familyquiz/quiz_set/level_quiz/level_card.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
                 text: "Commencer",
                 onTap: () {
                   Get.to(
-                    Statistique(),
+                    LevelCard(),
                     transition: Transition.rightToLeft,
                     duration: const Duration(milliseconds: 1000),
                   );

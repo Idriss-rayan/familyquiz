@@ -12,35 +12,37 @@ class Level extends StatelessWidget {
     QuestionController _questionController = Get.put(QuestionController());
     return Scaffold(
       body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.blueAccent,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          child: Stack(
-            children: [
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: const progressBar(),
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.blueAccent,
+          borderRadius: BorderRadius.circular(0),
+        ),
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: const progressBar(),
+                ),
+                SizedBox(height: 20),
+                Expanded(
+                  child: PageView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    controller: _questionController.pageController,
+                    onPageChanged: _questionController.updateTheQnNum,
+                    itemCount: _questionController.questions.length,
+                    itemBuilder: (context, index) => QuestionCard(
+                      question: _questionController.questions[index],
+                    ),
                   ),
-                  SizedBox(height: 20),
-                  Expanded(
-                    child: PageView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        controller: _questionController.pageController,
-                        onPageChanged: _questionController.updateTheQnNum,
-                        itemCount: _questionController.questions.length,
-                        itemBuilder: (context, index) => QuestionCard(
-                              question: _questionController.questions[index],
-                            )),
-                  )
-                ],
-              )
-            ],
-          )),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
