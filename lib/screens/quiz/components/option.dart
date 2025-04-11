@@ -64,7 +64,8 @@ class Option extends StatelessWidget {
                         : getTheRightColor(),
                     borderRadius: BorderRadius.circular(50),
                     border: Border.all(
-                        color: getTheRightColor()), // Appliquer la couleur
+                      color: getTheRightColor(),
+                    ), // Appliquer la couleur
                   ),
                   child: getTheRightColor() == kGrayColor
                       ? null
