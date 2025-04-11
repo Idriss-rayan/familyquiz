@@ -1,7 +1,6 @@
 import 'package:familyquiz/controllers/question_controller.dart';
 import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
 import 'package:familyquiz/screens/quiz/components/ques_card/quest_card1.dart';
-import 'package:familyquiz/screens/quiz/components/question_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -45,7 +44,7 @@ class Level extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
+            )
           ],
         ),
       ),

@@ -26,23 +26,23 @@ class QuestionController extends GetxController
       )
       .toList();
 
-  late List<Question> _quest1 = [];
+  late List<Question> _quest1 = sample_data
+      .map(
+        (question) => Question(
+          id: question['id'],
+          question: question['question'],
+          options: (question['options']),
+          answer: question['answer_index'],
+        ),
+      )
+      .toList();
 
   List<Question> get questions => this._questions;
   List<Question> get quest1 => this._quest1;
 
-  void QuestionDivider() {
-    _questions = sample_data
-        .map(
-          (question) => Question(
-            id: question['id'],
-            question: question['question'],
-            options: (question['options']),
-            answer: question['answer_index'],
-          ),
-        )
-        .toList();
+  int QuestionDivider() {
     _quest1 = _questions.sublist(0, 5);
+    return _quest1.length;
   }
 
   bool _Answered = false;
