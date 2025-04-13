@@ -40,10 +40,12 @@ class QuestionController extends GetxController
   List<Question> get questions => this._questions;
   List<Question> get quest1 => this._quest1;
 
-  int QuestionDivider() {
-    _quest1 = _questions.sublist(0, 5);
-    return _quest1.length;
-  }
+  // int QuestionDivider() {
+  //   _quest1 = _questions.sublist(0, 5);
+  //   return _quest1.length;
+  // }
+
+  int get questiondivider => _quest1.length ~/ 5;
 
   bool _Answered = false;
   bool get isAnswered => this._Answered;

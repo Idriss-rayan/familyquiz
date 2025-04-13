@@ -37,7 +37,7 @@ class Level extends StatelessWidget {
                     physics: NeverScrollableScrollPhysics(),
                     controller: _questionController.pageController,
                     onPageChanged: _questionController.updateTheQnNum,
-                    itemCount: _questionController.quest1.length,
+                    itemCount: _questionController.questiondivider,
                     itemBuilder: (context, index) => QuestCard1(
                       quest1: _questionController.quest1[index],
                     ),
