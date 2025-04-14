@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'African Quiz',
+      title: 'Africn Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: LevelCard(),
