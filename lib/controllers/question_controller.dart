@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:familyquiz/models/Questions.dart';
+import 'package:familyquiz/niveau/niveau1/questions1.dart';
 import 'package:familyquiz/screens/score/score_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,15 +38,27 @@ class QuestionController extends GetxController
       )
       .toList();
 
+  late List<Question1> _question1 = sample_data1
+      .map(
+        (question) => Question1(
+          id: question['id'],
+          question: question['question'],
+          options: (question['options']),
+          answer: question['answer_index'],
+        ),
+      )
+      .toList();
+
   List<Question> get questions => this._questions;
   List<Question> get quest1 => this._quest1;
+  List<Question1> get question1 => this._question1;
 
   // int QuestionDivider() {
   //   _quest1 = _questions.sublist(0, 5);
   //   return _quest1.length;
   // }
 
-  int get questiondivider => _quest1.length ~/ 5;
+  int get questiondivider => _quest1.length;
 
   bool _Answered = false;
   bool get isAnswered => this._Answered;
