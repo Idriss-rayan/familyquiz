@@ -1,4 +1,6 @@
-class Question1 {
+import 'package:familyquiz/models/Questions.dart';
+
+class Question1 extends Question {
   final int id, answer;
   final String question;
   final List<String> options;
@@ -8,8 +10,10 @@ class Question1 {
     required this.question,
     required this.answer,
     required this.options,
-  });
+  }) : super(id: id, question: question, answer: answer, options: options);
 }
+
+
 
 List<Map<String, dynamic>> sample_data1 = [
   {
@@ -78,7 +82,7 @@ List<Map<String, dynamic>> sample_data1 = [
     "options": [
       'Trésorier du parti',
       'Secrétaire général',
-      'Responsable des relations internationales',
+      'Responsable des relations internationale',
       'Président du Comité révolutionnaire'
     ],
     "answer_index": 1,
