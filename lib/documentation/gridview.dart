@@ -65,7 +65,7 @@ class BetiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildTextPage("assets/icons/beti.png", Name.beti, "MONGO BETI", [
+      body: _buildTextPage("assets/icons/beti.png", Name.beti, "MONGO BTI", [
         Color.fromARGB(255, 241, 185, 4),
         Colors.white,
       ]),
