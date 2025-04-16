@@ -1,3 +1,4 @@
+import 'package:familyquiz/niveau/niveau1/liste_niveau.dart';
 import 'package:familyquiz/screens/quiz/quiz_screen.dart';
 import 'package:familyquiz/quiz_set/level_quiz/level_card.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
@@ -32,7 +33,7 @@ class WelcomeScreen extends StatelessWidget {
                 text: "Commencer",
                 onTap: () {
                   Get.to(
-                    LevelCard(),
+                    ListeNiveau(),
                     transition: Transition.rightToLeft,
                     duration: const Duration(milliseconds: 1000),
                   );

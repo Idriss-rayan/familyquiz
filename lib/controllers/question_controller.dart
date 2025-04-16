@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:familyquiz/models/Questions.dart';
 import 'package:familyquiz/niveau/niveau1/questions1.dart';
+import 'package:familyquiz/niveau/niveau1/score1.dart';
 import 'package:familyquiz/screens/score/score_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -117,13 +118,13 @@ class QuestionController extends GetxController
   }
 
   void nextQuestion() {
-    if (_askedQuestions.length < _questions.length) {
+    if (_askedQuestions.length < _question1.length) {
       _Answered = false;
 
       // Pick a random question that hasn't been asked
       int nextIndex;
       do {
-        nextIndex = _random.nextInt(_questions.length);
+        nextIndex = _random.nextInt(_question1.length);
       } while (_askedQuestions.contains(nextIndex));
 
       _askedQuestions.add(nextIndex);
@@ -134,7 +135,7 @@ class QuestionController extends GetxController
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      Get.to(ScoreScreen());
+      Get.to(Score1());
     }
   }
 

@@ -20,7 +20,7 @@ class ListeNiveau extends StatelessWidget {
           child: ListView(
             children: [
               InkWell(
-                onTap: () => Get.to(
+                onTap: () => Get.off(
                   Niveau1Page(),
                   transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 500),
