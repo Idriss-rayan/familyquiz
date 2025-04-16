@@ -58,7 +58,7 @@ class QuestionController extends GetxController
   //   return _quest1.length;
   // }
 
-  int get questiondivider => _quest1.length;
+  int get questiondivider => _question1.length;
 
   bool _Answered = false;
   bool get isAnswered => this._Answered;

@@ -1,5 +1,8 @@
 import 'package:familyquiz/niveau/niveau1/niveau1_card.dart';
+import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/src/routes/default_transitions.dart';
 
 class ListeNiveau extends StatelessWidget {
   const ListeNiveau({super.key});
@@ -16,7 +19,14 @@ class ListeNiveau extends StatelessWidget {
           ),
           child: ListView(
             children: [
-              Niveau1Card(),
+              InkWell(
+                onTap: () => Get.to(
+                  Niveau1Page(),
+                  transition: Transition.rightToLeftWithFade,
+                  duration: Duration(milliseconds: 500),
+                ),
+                child: Niveau1Card(),
+              ),
               Niveau1Card(),
               Niveau1Card(),
               Niveau1Card(),

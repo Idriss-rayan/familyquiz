@@ -13,78 +13,43 @@ class Question1 extends Question {
   }) : super(id: id, question: question, answer: answer, options: options);
 }
 
-
-
 List<Map<String, dynamic>> sample_data1 = [
   {
     "id": 1,
-    "question":
-        "En quelle année Amadou Ahidjo devient-il vice-président du Grand Conseil de l'Afrique-Équatoriale ?",
-    "options": ['1952', '1955', '1957', '1959'],
-    "answer_index": 2,
+    "question": "Comment était surnommé Ruben Um Nyobé par ses partisans ?",
+    "options": ['Mpodol', 'Patriarche', 'Grand Camarade', 'Père du Cameroun'],
+    "answer_index": 0,
   },
   {
     "id": 2,
     "question":
-        "Quel était le parti politique d’Amadou Ahidjo après l’indépendance ?",
-    "options": ['UPC', 'UNDP', 'UC → UNC → RDPC', 'MDR'],
+        "En quelle année Ruben Um Nyobé a-t-il adressé une pétition à l’ONU pour l’indépendance du Cameroun ?",
+    "options": ['1945', '1948', '1952', '1954'],
     "answer_index": 2,
   },
   {
     "id": 3,
     "question":
-        "Quel traité a officiellement marqué la transition du Cameroun sous administration française vers un État indépendant sous Ahidjo ?",
-    "options": [
-      'Accords de Foumban',
-      'Accords de Yaoundé',
-      'Accords de Paris',
-      'Accords de Brazzaville'
-    ],
-    "answer_index": 1,
+        "Où exactement Ruben Um Nyobé a-t-il été assassiné par l'armée française ?",
+    "options": ['Boumyebel', 'Mbouda', 'Kribi', 'Dschang'],
+    "answer_index": 0,
+  },
+  {
+    "id": 4,
+    "question":
+        "Pour quel grand média Alain Foka est-il principalement connu ?",
+    "options": ['BBC Afrique', 'TV5 Monde', 'RFI', 'France 24'],
+    "answer_index": 2,
   },
   {
     "id": 5,
     "question":
-        "En quelle année Paul Biya a-t-il instauré le multipartisme au Cameroun ?",
-    "options": ['1982', '1985', '1990', '1992'],
-    "answer_index": 2,
-  },
-  {
-    "id": 6,
-    "question":
-        "Quelle crise politique a failli renverser Paul Biya en avril 1984 ?",
+        "Quelle est l’émission emblématique d’Alain Foka sur l’histoire africaine ?",
     "options": [
-      'Révolte des étudiants de Yaoundé',
-      'Tentative de coup d’État militaire',
-      'Assassinat de ses ministres',
-      'Soulèvement des Bakassi Boys'
+      'Afrique en marche',
+      'Archives d’Afrique',
+      "L'Afrique en questions', 'Héritage et Mémoire"
     ],
     "answer_index": 1,
-  },
-  {
-    "id": 7,
-    "question":
-        "Quelle équipe européenne a révélé Roger Milla à l'international en club ?",
-    "options": ['AS Monaco', 'Montpellier HSC', 'Valenciennes FC', 'SC Bastia'],
-    "answer_index": 3,
-  },
-  {
-    "id": 9,
-    "question":
-        "Contre quelle équipe Roger Milla a-t-il marqué un doublé en quart de finale de la Coupe du Monde 1990 ?",
-    "options": ['Colombie', 'Angleterre', 'Argentine', 'URSS'],
-    "answer_index": 0,
-  },
-  {
-    "id": 10,
-    "question":
-        "Quelle était la fonction exacte d’Ernest Ouandié au sein de l’UPC avant sa clandestinité ?",
-    "options": [
-      'Trésorier du parti',
-      'Secrétaire général',
-      'Responsable des relations internationale',
-      'Président du Comité révolutionnaire'
-    ],
-    "answer_index": 1,
-  },
+  }
 ];
