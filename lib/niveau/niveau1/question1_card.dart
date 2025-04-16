@@ -44,6 +44,5 @@ class Question1Card extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
