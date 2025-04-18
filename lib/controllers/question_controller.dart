@@ -91,7 +91,7 @@ class QuestionController extends GetxController
     _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
-    _questions.shuffle();
+    _question1.shuffle();
     super.onInit();
   }
 
