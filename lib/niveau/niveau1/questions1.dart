@@ -14,12 +14,12 @@ class Question1 extends Question {
 }
 
 List<Map<String, dynamic>> sample_data1 = [
-  {
-    "id": 1,
-    "question": "Comment était surnommé Ruben Um Nyobé par ses partisans ?",
-    "options": ['Mpodol', 'Patriarche', 'Grand Camarade', 'Père du Cameroun'],
-    "answer_index": 0,
-  },
+  // {
+  //   "id": 1,
+  //   "question": "Comment était surnommé Ruben Um Nyobé par ses partisans ?",
+  //   "options": ['Mpodol', 'Patriarche', 'Grand Camarade', 'Père du Cameroun'],
+  //   "answer_index": 0,
+  // },
   {
     "id": 2,
     "question":
@@ -34,22 +34,4 @@ List<Map<String, dynamic>> sample_data1 = [
     "options": ['Boumyebel', 'Mbouda', 'Kribi', 'Dschang'],
     "answer_index": 0,
   },
-  {
-    "id": 4,
-    "question":
-        "Pour quel grand média Alain Foka est-il principalement connu ?",
-    "options": ['BBC Afrique', 'TV5 Monde', 'RFI', 'France 24'],
-    "answer_index": 2,
-  },
-  {
-    "id": 5,
-    "question":
-        "Quelle est l’émission emblématique d’Alain Foka sur l’histoire africaine ?",
-    "options": [
-      'Afrique en marche',
-      'Archives d’Afrique',
-      "L'Afrique en questions', 'Héritage et Mémoire"
-    ],
-    "answer_index": 1,
-  }
 ];

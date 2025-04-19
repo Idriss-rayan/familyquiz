@@ -105,6 +105,11 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       Get.to(Score1());
+      update();
     }
+  }
+
+  void updateTheQnNum(int index) {
+    _questionNumber.value = index + 1;
   }
 }

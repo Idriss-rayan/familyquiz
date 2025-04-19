@@ -136,10 +136,26 @@ class QuestionController extends GetxController
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       Get.to(Score1());
+      resetQuiz();
     }
   }
 
   void updateTheQnNum(int index) {
     _questionNumber.value = index + 1;
+  }
+
+  void resetQuiz() {
+    _Answered = false;
+    _numOfCorrectAns = 0;
+    _askedQuestions.clear();
+    _questionNumber.value = 1;
+
+    _question1.shuffle();
+    _pageController.jumpToPage(0);
+
+    _animationController.reset();
+    _animationController.forward().whenComplete(nextQuestion);
+
+    update();
   }
 }

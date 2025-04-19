@@ -37,7 +37,7 @@ class Niveau1Page extends StatelessWidget {
                     physics: NeverScrollableScrollPhysics(),
                     controller: _questionController.pageController,
                     onPageChanged: _questionController.updateTheQnNum,
-                    itemCount: _questionController.questiondivider,
+                    itemCount: _questionController.question1.length,
                     itemBuilder: (context, index) => Question1Card(
                       question1: _questionController.question1[index],
                     ),

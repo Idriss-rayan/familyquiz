@@ -1,6 +1,4 @@
-import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Niveau1Card extends StatelessWidget {
   const Niveau1Card({super.key});
