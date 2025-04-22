@@ -29,7 +29,6 @@ class ListeNiveau extends StatelessWidget {
               Niveau1Card(),
               Niveau1Card(),
               Niveau1Card(),
-              Niveau1Card(),
             ],
           )),
     );
