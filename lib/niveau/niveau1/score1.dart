@@ -1,7 +1,9 @@
 import 'dart:ui';
 import 'package:familyquiz/controllers/question_controller.dart';
 import 'package:familyquiz/niveau/niveau1/liste_niveau.dart';
+import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
+import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -63,7 +65,12 @@ class Score1 extends StatelessWidget {
             ),
             FancyButton(
               text: "Recommencer",
-              onTap: () => Get.to(ListeNiveau()),
+              //onTap: () => Get.to(StartScreen()),
+              //onTap: () => Get.off(Niveau1Page()),
+              onTap: () async {
+                await _qnController.resetQuiz();
+                Get.to(Niveau1Page());
+              },
               gradient: LinearGradient(colors: [
                 const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
                 const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),

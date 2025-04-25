@@ -136,7 +136,7 @@ class QuestionController extends GetxController
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       Get.to(Score1());
-      resetQuiz();
+      //resetQuiz();
     }
   }
 
@@ -144,18 +144,17 @@ class QuestionController extends GetxController
     _questionNumber.value = index + 1;
   }
 
-  void resetQuiz() {
-    _Answered = false;
-    _numOfCorrectAns = 0;
-    _askedQuestions.clear();
+  Future<void> resetQuiz() async {
+    // _askedQuestions.clear();
+    // _numOfCorrectAns = 0;
     _questionNumber.value = 1;
+    // _Answered = false;
+    // _selectedAns = 0;
+    // _correctAns = 0;
+    // _animationController.reset();
+    // _question1.shuffle();
+    // _pageController.jumpToPage(0);
 
-    _question1.shuffle();
-    _pageController.jumpToPage(0);
-
-    _animationController.reset();
     _animationController.forward().whenComplete(nextQuestion);
-
-    update();
   }
 }
