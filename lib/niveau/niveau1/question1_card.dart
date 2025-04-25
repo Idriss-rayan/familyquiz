@@ -40,7 +40,7 @@ class Question1Card extends StatelessWidget {
               text: question1.options[index],
               press: () => _controller.checkAns(question1 as Question, index),
             ),
-          )
+          ),
         ],
       ),
     );

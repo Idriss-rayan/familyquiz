@@ -110,12 +110,12 @@ class QuestionController extends GetxController
     });
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-    _animationController.dispose();
-    _pageController.dispose();
-  }
+  // @override
+  // void onClose() {
+  //   super.onClose();
+  //   _animationController.dispose();
+  //   _pageController.dispose();
+  // }
 
   void nextQuestion() {
     if (_askedQuestions.length < _question1.length) {
@@ -144,16 +144,28 @@ class QuestionController extends GetxController
     _questionNumber.value = index + 1;
   }
 
+  // @override
+  // void onClose() {
+  //   _animationController.dispose();
+  //   _pageController.dispose();
+  //   super.onClose();
+  // }
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   Future<void> resetQuiz() async {
-    // _askedQuestions.clear();
-    // _numOfCorrectAns = 0;
+    _askedQuestions.clear();
+    _numOfCorrectAns = 0;
     _questionNumber.value = 1;
-    // _Answered = false;
-    // _selectedAns = 0;
-    // _correctAns = 0;
-    // _animationController.reset();
-    // _question1.shuffle();
-    // _pageController.jumpToPage(0);
+    _Answered = false;
+    _selectedAns = 0;
+    _correctAns = 0;
+    _animationController.reset();
+    _question1.shuffle();
+    //_pageController.jumpToPage(0);
 
     _animationController.forward().whenComplete(nextQuestion);
   }

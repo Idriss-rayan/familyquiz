@@ -28,9 +28,11 @@ class Niveau1Page extends StatelessWidget {
                   child: const progressBar(),
                 ),
                 SizedBox(height: 20),
-                Obx(() => Center(
-                    child:
-                        Text("${_questionController.questionNumber.value}"))),
+                Obx(
+                  () => Center(
+                    child: Text("${_questionController.questionNumber.value}"),
+                  ),
+                ),
                 SizedBox(height: 20),
                 Expanded(
                   child: PageView.builder(
