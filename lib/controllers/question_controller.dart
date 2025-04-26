@@ -88,6 +88,7 @@ class QuestionController extends GetxController
     _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
+    _pageController1 = PageController();
     _question1.shuffle();
     super.onInit();
   }
@@ -119,7 +120,19 @@ class QuestionController extends GetxController
       _askedQuestions.add(nextIndex);
       _questionNumber.value = nextIndex;
 
-      _pageController.jumpToPage(nextIndex);
+      try {
+        if (_pageController.hasClients && !_pageController.positions.isEmpty) {
+          _pageController.jumpToPage(nextIndex);
+        } else if (_pageController1.hasClients &&
+            !_pageController1.positions.isEmpty) {
+          _pageController1.jumpToPage(nextIndex);
+        } else {
+          _createNewControllerAndJump(nextIndex);
+        }
+      } catch (e) {
+        debugPrint("Erreur de navigation: $e");
+        _handleNavigationError(nextIndex);
+      }
 
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
@@ -149,5 +162,19 @@ class QuestionController extends GetxController
     _question1.shuffle();
 
     _animationController.forward().whenComplete(nextQuestion);
+  }
+
+  void _createNewControllerAndJump(int index) {
+    _pageController1 = PageController(initialPage: index);
+    Get.forceAppUpdate(); // Force le recalcul de l'interface
+  }
+
+  void _handleNavigationError(int index) {
+    Future.delayed(
+      Duration(milliseconds: 100),
+      () {
+        _pageController1 = PageController(initialPage: index);
+      },
+    );
   }
 }
