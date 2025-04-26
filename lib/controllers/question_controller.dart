@@ -137,7 +137,7 @@ class QuestionController extends GetxController
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      Get.to(Score1());
+      Get.offAll(Score1());
     }
   }
 
