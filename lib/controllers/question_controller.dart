@@ -2,7 +2,6 @@ import 'dart:math';
 import 'package:familyquiz/models/Questions.dart';
 import 'package:familyquiz/niveau/niveau1/questions1.dart';
 import 'package:familyquiz/niveau/niveau1/score1.dart';
-import 'package:familyquiz/screens/score/score_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +15,9 @@ class QuestionController extends GetxController
   //gestion des pages ... genre controllent les pages du quiz, permetteent de passer d'une page a l'autre
   late PageController _pageController;
   PageController get pageController => this._pageController;
+// to solve our BIG deal
+  late PageController _pageController1;
+  PageController get pageController1 => this._pageController1;
 
   List<Question> _questions = sample_data
       .map(
@@ -54,11 +56,6 @@ class QuestionController extends GetxController
   List<Question> get quest1 => this._quest1;
   List<Question1> get question1 => this._question1;
 
-  // int QuestionDivider() {
-  //   _quest1 = _questions.sublist(0, 5);
-  //   return _quest1.length;
-  // }
-
   int get questiondivider => _question1.length;
 
   bool _Answered = false;
@@ -76,7 +73,7 @@ class QuestionController extends GetxController
   late int _numOfCorrectAns = 0;
   int get numOfCorrectAns => this._numOfCorrectAns;
 
-  final List<int> _askedQuestions = []; // Store already asked questions
+  final List<int> _askedQuestions = [];
   final Random _random = Random();
 
   @override
@@ -110,18 +107,10 @@ class QuestionController extends GetxController
     });
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  //   _animationController.dispose();
-  //   _pageController.dispose();
-  // }
-
   void nextQuestion() {
     if (_askedQuestions.length < _question1.length) {
       _Answered = false;
 
-      // Pick a random question that hasn't been asked
       int nextIndex;
       do {
         nextIndex = _random.nextInt(_question1.length);
@@ -136,7 +125,6 @@ class QuestionController extends GetxController
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       Get.to(Score1());
-      //resetQuiz();
     }
   }
 
@@ -144,12 +132,6 @@ class QuestionController extends GetxController
     _questionNumber.value = index + 1;
   }
 
-  // @override
-  // void onClose() {
-  //   _animationController.dispose();
-  //   _pageController.dispose();
-  //   super.onClose();
-  // }
   @override
   void dispose() {
     _pageController.dispose();
@@ -165,7 +147,6 @@ class QuestionController extends GetxController
     _correctAns = 0;
     _animationController.reset();
     _question1.shuffle();
-    //_pageController.jumpToPage(0);
 
     _animationController.forward().whenComplete(nextQuestion);
   }
