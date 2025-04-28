@@ -1,4 +1,4 @@
-import 'package:familyquiz/niveau/niveau1/liste_niveau.dart';
+import 'package:familyquiz/niveau/liste_niveau.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

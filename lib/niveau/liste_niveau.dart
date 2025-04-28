@@ -1,5 +1,6 @@
 import 'package:familyquiz/niveau/niveau1/niveau1_card.dart';
 import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
+import 'package:familyquiz/niveau/niveau2/niveau2_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,7 +27,7 @@ class ListeNiveau extends StatelessWidget {
                 ),
                 child: Niveau1Card(),
               ),
-              Niveau1Card(),
+              Niveau2Card(),
               Niveau1Card(),
               Niveau1Card(),
               Niveau1Card(),
