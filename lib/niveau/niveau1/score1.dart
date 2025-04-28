@@ -7,7 +7,8 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Score1 extends StatelessWidget {
-  const Score1({super.key});
+  final int score;
+  const Score1({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class Score1 extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  '${_qnController.numOfCorrectAns * 10}',
+                  '${score * 10}',
                   style: TextStyle(
                     color: Colors.white.withValues(alpha: 0.7),
                     fontWeight: FontWeight.bold,

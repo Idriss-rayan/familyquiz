@@ -104,7 +104,9 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      Get.to(Score1());
+      Get.to(Score1(
+        score: 0,
+      ));
       update();
     }
   }
