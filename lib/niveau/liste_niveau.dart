@@ -13,34 +13,60 @@ import 'niveau7/niveau7_card.dart';
 class ListeNiveau extends StatelessWidget {
   const ListeNiveau({super.key});
 
+  // Fonction pour afficher un CircularProgressIndicator et naviguer ensuite
+  Future<void> _navigateWithLoader(BuildContext context, Widget page) async {
+    // Afficher le loader
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return const Center(
+          child: CircularProgressIndicator(
+            color: Colors.white,
+          ),
+        );
+      },
+    );
+
+    // Petite pause pour simuler un chargement
+    await Future.delayed(const Duration(milliseconds: 500));
+
+    // Fermer le loader
+    Navigator.of(context).pop();
+
+    // Naviguer vers la page souhaitée
+    Get.to(
+      page,
+      transition: Transition.rightToLeftWithFade,
+      duration: const Duration(milliseconds: 500),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 229, 131, 246),
-          ),
-          child: ListView(
-            children: [
-              InkWell(
-                onTap: () => Get.to(
-                  Niveau1Page(),
-                  transition: Transition.rightToLeftWithFade,
-                  duration: Duration(milliseconds: 500),
-                ),
-                child: Niveau1Card(),
-              ),
-              Niveau2Card(),
-              Niveau3Card(),
-              Niveau4Card(),
-              Niveau5Card(),
-              Niveau6Card(),
-              Niveau7Card(),
-            ],
-          )),
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(255, 229, 131, 246),
+        ),
+        child: ListView(
+          children: [
+            InkWell(
+              onTap: () => _navigateWithLoader(context, Niveau1Page()),
+              child: const Niveau1Card(),
+            ),
+            const Niveau2Card(),
+            const Niveau3Card(),
+            const Niveau4Card(),
+            const Niveau5Card(),
+            const Niveau6Card(),
+            const Niveau7Card(),
+          ],
+        ),
+      ),
     );
   }
 }
