@@ -23,6 +23,9 @@ class Niveau1Page extends StatelessWidget {
           children: [
             Column(
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: const progressBar(),
@@ -46,7 +49,7 @@ class Niveau1Page extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

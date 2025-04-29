@@ -5,6 +5,8 @@ import 'package:familyquiz/niveau/niveau1/score1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../niveau/niveau1/congrat_page.dart';
+
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
   //declaration des variables d'animations
@@ -136,6 +138,17 @@ class QuestionController extends GetxController
 
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
+    } else if (_numOfCorrectAns >= question1.length) {
+      Get.off(
+        CongratPage(
+          imagePath: 'assets/images/cong.png',
+          message: 'FELICITATIONS!',
+          onPressed: () {
+            Get.back();
+          },
+        ),
+        transition: Transition.noTransition,
+      );
     } else {
       Get.offAll(Score1(score: _numOfCorrectAns));
     }

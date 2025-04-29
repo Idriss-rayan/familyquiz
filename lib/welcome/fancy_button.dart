@@ -50,7 +50,7 @@ class _FancyButtonState extends State<FancyButton> {
               style: GoogleFonts.comicNeue(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.white.withValues(alpha: 0.75),
                 letterSpacing: 1.5,
               ),
             ),

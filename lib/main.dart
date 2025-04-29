@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Africn Quiz',
+      title: 'African Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: AuthGate(),

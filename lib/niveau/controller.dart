@@ -1,6 +1,5 @@
 import 'dart:math';
-
-import 'package:familyquiz/niveau/niveau1/questions1.dart';
+import 'package:familyquiz/niveau/niveau2/questions2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,9 +15,9 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
   late PageController _pageController;
   PageController get pageController => this._pageController;
 
-  List<Question1> _question1 = sample_data1
+  List<Question2> _question2 = sample_data2
       .map(
-        (question) => Question1(
+        (question) => Question2(
           id: question['id'],
           question: question['question'],
           options: (question['options']),
@@ -27,8 +26,8 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
       )
       .toList();
 
-  List<Question1> get question1 => this._question1;
-  int get questiondivider => _question1.length;
+  List<Question2> get question2 => this._question2;
+  int get questiondivider => _question2.length;
 
   bool _Answered = false;
   bool get isAnswered => this._Answered;
@@ -60,11 +59,11 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
     _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
-    _question1.shuffle();
+    _question2.shuffle();
     super.onInit();
   }
 
-  void checkAns(Question1 question, int selectedIndex) {
+  void checkAns(Question2 question, int selectedIndex) {
     _Answered = true;
     _correctAns = question.answer;
     _selectedAns = selectedIndex;
@@ -87,13 +86,13 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
   }
 
   void nextQuestion() {
-    if (_askedQuestions.length < _question1.length) {
+    if (_askedQuestions.length < _question2.length) {
       _Answered = false;
 
       // Pick a random question that hasn't been asked
       int nextIndex;
       do {
-        nextIndex = _random.nextInt(_question1.length);
+        nextIndex = _random.nextInt(_question2.length);
       } while (_askedQuestions.contains(nextIndex));
 
       _askedQuestions.add(nextIndex);

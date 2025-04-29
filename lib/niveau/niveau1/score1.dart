@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:familyquiz/controllers/question_controller.dart';
 import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
+import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,13 +50,29 @@ class Score1 extends StatelessWidget {
                 ),
               ),
               child: Center(
-                child: Text(
-                  '${score * 10}',
-                  style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.7),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 50,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '${score}',
+                      style: TextStyle(
+                        color: Colors.white.withValues(alpha: 0.7),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 50,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "sur ${_qnController.question1.length}",
+                      style: TextStyle(
+                        color: Colors.white.withValues(alpha: 0.7),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 50,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -69,6 +86,22 @@ class Score1 extends StatelessWidget {
               onTap: () async {
                 await _qnController.resetQuiz();
                 Get.to(Niveau1Page());
+              },
+              gradient: LinearGradient(colors: [
+                const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
+                const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),
+              ]),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            FancyButton(
+              text: "Menu Principal",
+              //onTap: () => Get.to(StartScreen()),
+              //onTap: () => Get.off(Niveau1Page()),
+              onTap: () async {
+                await _qnController.resetQuiz();
+                Get.off(StartScreen());
               },
               gradient: LinearGradient(colors: [
                 const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
