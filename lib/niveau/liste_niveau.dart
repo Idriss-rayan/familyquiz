@@ -4,6 +4,7 @@ import 'package:familyquiz/niveau/niveau2/niveau2_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'niveau2/niveau2_page.dart';
 import 'niveau3/niveau3_card.dart';
 import 'niveau4/niveau4_card.dart';
 import 'niveau5/niveau5_card.dart';
@@ -58,8 +59,11 @@ class ListeNiveau extends StatelessWidget {
               onTap: () => _navigateWithLoader(context, Niveau1Page()),
               child: const Niveau1Card(),
             ),
-            const Niveau2Card(),
-            const Niveau3Card(),
+            InkWell(
+              onTap: () => _navigateWithLoader(context, Niveau2Page()),
+              child: Niveau2Card(),
+            ),
+            const Niveau2Page(),
             const Niveau4Card(),
             const Niveau5Card(),
             const Niveau6Card(),

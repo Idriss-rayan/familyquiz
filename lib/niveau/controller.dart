@@ -3,6 +3,7 @@ import 'package:familyquiz/niveau/niveau2/questions2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'niveau1/congrat_page.dart';
 import 'niveau1/score1.dart';
 
 class Controller extends GetxController with SingleGetTickerProviderMixin {
@@ -14,6 +15,9 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
   //gestion des pages ... genre controllent les pages du quiz, permetteent de passer d'une page a l'autre
   late PageController _pageController;
   PageController get pageController => this._pageController;
+
+  late PageController _pageController2;
+  PageController get pageController2 => this._pageController2;
 
   List<Question2> _question2 = sample_data2
       .map(
@@ -59,6 +63,7 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
     _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
+    _pageController2 = PageController();
     _question2.shuffle();
     super.onInit();
   }
@@ -78,13 +83,6 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
     });
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-    _animationController.dispose();
-    _pageController.dispose();
-  }
-
   void nextQuestion() {
     if (_askedQuestions.length < _question2.length) {
       _Answered = false;
@@ -98,19 +96,72 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
       _askedQuestions.add(nextIndex);
       _questionNumber.value = nextIndex;
 
-      _pageController.jumpToPage(nextIndex);
+      try {
+        if (_pageController.hasClients && !_pageController.positions.isEmpty) {
+          _pageController.jumpToPage(nextIndex);
+        } else if (_pageController2.hasClients &&
+            !_pageController2.positions.isEmpty) {
+          _pageController2.jumpToPage(nextIndex);
+        } else {
+          _createNewControllerAndJump(nextIndex);
+        }
+      } catch (e) {
+        debugPrint("Erreur de navigation: $e");
+        _handleNavigationError(nextIndex);
+      }
 
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
+    } else if (_numOfCorrectAns >= question2.length) {
+      Get.off(
+        CongratPage(
+          imagePath: 'assets/images/cong.png',
+          message: 'FELICITATIONS!',
+          onPressed: () {
+            Get.back();
+          },
+        ),
+        transition: Transition.noTransition,
+      );
     } else {
-      Get.to(Score1(
-        score: 0,
-      ));
-      update();
+      Get.offAll(Score1(score: _numOfCorrectAns));
     }
   }
 
   void updateTheQnNum(int index) {
     _questionNumber.value = index + 1;
+  }
+
+  @override
+  void dispose() {
+    _pageController2.dispose();
+    super.dispose();
+  }
+
+  Future<void> resetQuiz() async {
+    _askedQuestions.clear();
+    _numOfCorrectAns = 0;
+    _questionNumber.value = 1;
+    _Answered = false;
+    _selectedAns = 0;
+    _correctAns = 0;
+    _animationController.reset();
+    _question2.shuffle();
+
+    _animationController.forward().whenComplete(nextQuestion);
+  }
+
+  void _createNewControllerAndJump(int index) {
+    _pageController2 = PageController(initialPage: index);
+    Get.forceAppUpdate(); // Force le recalcul de l'interface
+  }
+
+  void _handleNavigationError(int index) {
+    Future.delayed(
+      Duration(milliseconds: 100),
+      () {
+        _pageController = PageController(initialPage: index);
+      },
+    );
   }
 }

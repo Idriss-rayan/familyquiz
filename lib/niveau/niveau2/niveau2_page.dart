@@ -1,4 +1,3 @@
-import 'package:familyquiz/controllers/question_controller.dart';
 import 'package:familyquiz/niveau/controller.dart';
 import 'package:familyquiz/niveau/niveau2/question2_card.dart';
 import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
