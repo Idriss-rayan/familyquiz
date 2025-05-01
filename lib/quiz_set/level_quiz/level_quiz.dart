@@ -39,7 +39,7 @@ class Level extends StatelessWidget {
                     onPageChanged: _questionController.updateTheQnNum,
                     itemCount: _questionController.questiondivider,
                     itemBuilder: (context, index) => QuestCard1(
-                      quest1: _questionController.quest1[index],
+                      quest1: _questionController.question1[index],
                     ),
                   ),
                 ),

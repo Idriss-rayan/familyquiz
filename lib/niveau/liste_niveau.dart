@@ -63,7 +63,7 @@ class ListeNiveau extends StatelessWidget {
               onTap: () => _navigateWithLoader(context, Niveau2Page()),
               child: Niveau2Card(),
             ),
-            const Niveau2Page(),
+            const Niveau3Card(),
             const Niveau4Card(),
             const Niveau5Card(),
             const Niveau6Card(),

@@ -43,7 +43,8 @@ class Body extends StatelessWidget {
                           ?.copyWith(color: kSecondaryColor),
                       children: [
                         TextSpan(
-                          text: "/${_questionController.questions.length}",
+                          text:
+                              "/${_questionController.question1.length}", //  text: "/${_questionController.question.length}", PARCE QUE C'EST NOTRE TOUT PREMIER BODY(question ET NON question1)
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium
@@ -66,9 +67,10 @@ class Body extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   controller: _questionController.pageController,
                   onPageChanged: _questionController.updateTheQnNum,
-                  itemCount: _questionController.questions.length,
+                  itemCount:
+                      _questionController.question1.length, // de meme ici
                   itemBuilder: (context, index) => QuestionCard(
-                    question: _questionController.questions[index],
+                    question: _questionController.question1[index], // de meme
                   ),
                 ),
               ),
