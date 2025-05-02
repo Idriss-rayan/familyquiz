@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import 'niveau1/congrat_page.dart';
 import 'niveau1/score1.dart';
+import 'niveau2/score2.dart';
 
 class Controller extends GetxController with SingleGetTickerProviderMixin {
   //declaration des variables d'animations
@@ -12,7 +13,7 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
   late Animation _animation;
   Animation get animation => this._animation;
 
-  //gestion des pages ... genre controllent les pages du quiz, permetteent de passer d'une page a l'autre
+  //gestion des pages ... genre controllent les pages du quiz, permetent de passer d'une page a l'autre
   late PageController _pageController;
   PageController get pageController => this._pageController;
 
@@ -124,7 +125,7 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
         transition: Transition.noTransition,
       );
     } else {
-      Get.offAll(Score1(score: _numOfCorrectAns));
+      Get.offAll(Score2(score: _numOfCorrectAns));
     }
   }
 
@@ -134,7 +135,7 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
 
   @override
   void dispose() {
-    _pageController2.dispose();
+    _pageController.dispose();
     super.dispose();
   }
 
@@ -160,7 +161,7 @@ class Controller extends GetxController with SingleGetTickerProviderMixin {
     Future.delayed(
       Duration(milliseconds: 100),
       () {
-        _pageController = PageController(initialPage: index);
+        _pageController2 = PageController(initialPage: index);
       },
     );
   }

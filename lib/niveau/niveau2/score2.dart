@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:familyquiz/controllers/question_controller.dart';
-import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,9 +8,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../niveau2/niveau2_page.dart';
 
-class Score1 extends StatelessWidget {
+class Score2 extends StatelessWidget {
   final int score;
-  const Score1({super.key, required this.score});
+  const Score2({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class Score1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Score",
+              "Score2",
               style: GoogleFonts.comicNeue(
                 fontSize: 100,
                 fontWeight: FontWeight.bold,
@@ -83,11 +82,9 @@ class Score1 extends StatelessWidget {
             ),
             FancyButton(
               text: "Recommencer",
-              //onTap: () => Get.to(StartScreen()),
-              //onTap: () => Get.off(Niveau1Page()),
               onTap: () async {
                 await _qnController.resetQuiz();
-                Get.to(Niveau1Page());
+                Get.to(Niveau2Page());
               },
               gradient: LinearGradient(colors: [
                 const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
@@ -99,8 +96,6 @@ class Score1 extends StatelessWidget {
             ),
             FancyButton(
               text: "Menu Principal",
-              //onTap: () => Get.to(StartScreen()),
-              //onTap: () => Get.off(Niveau1Page()),
               onTap: () async {
                 await _qnController.resetQuiz();
                 Get.off(StartScreen());

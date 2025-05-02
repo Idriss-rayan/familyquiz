@@ -16,53 +16,53 @@ class Question2 extends Question {
 List<Map<String, dynamic>> sample_data2 = [
   {
     "id": 1,
-    "question": "En quelle année Hamadou Ahidjo devient-il Premier Ministre ?",
-    "options": ['1957', '1958', '1959', '1960'],
-    "answer_index": 1,
+    "question": "Quel est le livre sacré de l'islam ?",
+    "options": ["Torah", "Évangile", "Coran", "Vedas"],
+    "answer_index": 2
   },
   {
     "id": 2,
-    "question":
-        "À quel parti politique Paul Biya a-t-il appartenu avant de devenir président ?",
-    "options": ['UPC', 'UNC', 'RDPC', 'PDC'],
-    "answer_index": 1,
+    "question": "Combien de piliers compte l’islam ?",
+    "options": ["3", "4", "5", "6"],
+    "answer_index": 2
   },
   {
     "id": 3,
-    "question": "Quel est le lieu d'exécution d’Ernest Ouandié ?",
-    "options": ['Bafoussam', 'Yaoundé', 'Garoua', 'Bamenda'],
-    "answer_index": 0,
+    "question":
+        "Dans quelle ville est né le prophète Mohammed (paix sur lui) ?",
+    "options": ["Médine", "La Mecque", "Jérusalem", "Bagdad"],
+    "answer_index": 1
   },
   {
     "id": 4,
-    "question":
-        "À quel âge Roger Milla a-t-il participé à la Coupe du Monde 1990 ?",
-    "options": ['32', '36', '38', '42'],
-    "answer_index": 2,
+    "question": "Comment s'appelle le jeûne obligatoire du mois sacré ?",
+    "options": ["Hajj", "Zakat", "Ramadan", "Salat"],
+    "answer_index": 2
   },
   {
     "id": 5,
     "question":
-        "Dans quel média Alain Foka a-t-il fait sa carrière principale ?",
-    "options": ['BBC', 'RFI', 'VOA', 'France24'],
-    "answer_index": 1,
+        "Combien de fois par jour les musulmans accomplissent-ils la prière (Salat) ?",
+    "options": ["3", "4", "5", "6"],
+    "answer_index": 2
   },
   {
     "id": 6,
-    "question": "Quel est le roman le plus célèbre de Mongo Beti ?",
-    "options": ['Ville cruelle', 'Le Pauvre Christ', 'Main basse', 'Perpétue'],
-    "answer_index": 1,
+    "question":
+        "Quel ange a transmis la révélation au prophète Mohammed (paix sur lui) ?",
+    "options": ["Mikail", "Israfil", "Djibril", "Azraïl"],
+    "answer_index": 2
   },
   {
     "id": 7,
-    "question": "Dans quel pays Félix-Roland Moumié a-t-il été empoisonné ?",
-    "options": ['Cameroun', 'France', 'Suisse', 'Congo'],
-    "answer_index": 2,
+    "question": "Quelle ville est la destination du pèlerinage (Hajj) ?",
+    "options": ["Médine", "Jérusalem", "La Mecque", "Bagdad"],
+    "answer_index": 2
   },
   {
     "id": 8,
-    "question": "Quelle année Ruben Um Nyobé a-t-il été tué ?",
-    "options": ['1955', '1957', '1958', '1960'],
-    "answer_index": 2,
+    "question": "Comment s’appelle l’aumône obligatoire en islam ?",
+    "options": ["Sadaqa", "Zakat", "Fitra", "Kaffara"],
+    "answer_index": 1
   },
 ];

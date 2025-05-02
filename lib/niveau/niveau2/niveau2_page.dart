@@ -4,12 +4,15 @@ import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../controllers/question_controller.dart';
+
 class Niveau2Page extends StatelessWidget {
   const Niveau2Page({super.key});
 
   @override
   Widget build(BuildContext context) {
     Controller _qController = Get.put(Controller());
+    QuestionController _questionController = Get.put(QuestionController());
     return Material(
       child: Container(
         width: double.infinity,
@@ -37,7 +40,7 @@ class Niveau2Page extends StatelessWidget {
                 Expanded(
                   child: PageView.builder(
                     physics: NeverScrollableScrollPhysics(),
-                    controller: _qController.pageController,
+                    controller: _questionController.pageController,
                     onPageChanged: _qController.updateTheQnNum,
                     itemCount: _qController.question2.length,
                     itemBuilder: (context, index) => Question2Card(
