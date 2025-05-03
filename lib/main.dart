@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'welcome/start_screen.dart';
+
 void main() async {
   // supabase setup
   await Supabase.initialize(
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'African Quiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: AuthGate(),
+      home: StartScreen(),
     );
   }
 }

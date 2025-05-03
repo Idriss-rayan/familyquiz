@@ -3,13 +3,7 @@ import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:familyquiz/niveau/niveau2/niveau2_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'niveau2/niveau2_page.dart';
-import 'niveau3/niveau3_card.dart';
-import 'niveau4/niveau4_card.dart';
-import 'niveau5/niveau5_card.dart';
-import 'niveau6/niveau6_card.dart';
-import 'niveau7/niveau7_card.dart';
 
 class ListeNiveau extends StatelessWidget {
   const ListeNiveau({super.key});
@@ -38,8 +32,6 @@ class ListeNiveau extends StatelessWidget {
     // Naviguer vers la page souhaitée
     Get.to(
       page,
-      transition: Transition.rightToLeftWithFade,
-      duration: const Duration(milliseconds: 500),
     );
   }
 
@@ -63,11 +55,6 @@ class ListeNiveau extends StatelessWidget {
               onTap: () => _navigateWithLoader(context, Niveau2Page()),
               child: Niveau2Card(),
             ),
-            const Niveau3Card(),
-            const Niveau4Card(),
-            const Niveau5Card(),
-            const Niveau6Card(),
-            const Niveau7Card(),
           ],
         ),
       ),

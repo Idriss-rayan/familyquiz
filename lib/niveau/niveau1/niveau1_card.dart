@@ -47,7 +47,7 @@ class Niveau1Card extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  "Niveau 1",
+                  "Débutant",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28,

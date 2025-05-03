@@ -1,10 +1,12 @@
+import 'dart:io';
+
 import 'package:familyquiz/documentation/choose_page.dart';
-import 'package:familyquiz/screens/profile_screen/profile.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:familyquiz/screens/welcome/welcome_screen.dart';
+
+import '../niveau/liste_niveau.dart';
 // 👈 Import du bouton stylé
 
 class StartScreen extends StatelessWidget {
@@ -50,26 +52,18 @@ class StartScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const Spacer(),
+            const SizedBox(height: 150),
             FancyButton(
-              text: "Carrière",
+              text: "commencer",
               onTap: () {
                 Get.to(
-                  const WelcomeScreen(),
+                  const ListeNiveau(),
                   transition: Transition.rightToLeftWithFade,
                   duration: const Duration(milliseconds: 1000),
                 );
               },
               gradient: const LinearGradient(
                 colors: [Color(0xFF9C27B0), Color(0xFFE040FB)],
-              ),
-            ),
-            const SizedBox(height: 20),
-            FancyButton(
-              text: "Compétition",
-              onTap: () {},
-              gradient: const LinearGradient(
-                colors: [Color(0xFF8E24AA), Color(0xFFD500F9)],
               ),
             ),
             const SizedBox(height: 20),
@@ -88,13 +82,9 @@ class StartScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             FancyButton(
-              text: "Profile et rang",
+              text: "Quitter",
               onTap: () {
-                Get.to(
-                  Profile(),
-                  transition: Transition.rightToLeftWithFade,
-                  duration: const Duration(milliseconds: 1000),
-                );
+                exit(0);
               },
               gradient: const LinearGradient(
                 colors: [Color(0xFF4A148C), Color(0xFF7B1FA2)],

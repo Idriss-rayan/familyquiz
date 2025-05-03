@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:familyquiz/controllers/question_controller.dart';
+import 'package:familyquiz/niveau/liste_niveau.dart';
 import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:familyquiz/welcome/start_screen.dart';
@@ -81,21 +82,34 @@ class Score1 extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
+            // FancyButton(
+            //   text: "Recommencer",
+            //   onTap: () async {
+            //     await _qnController.resetQuiz();
+            //     Get.to(Niveau1Page());
+            //   },
+            //   gradient: LinearGradient(colors: [
+            //     const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
+            //     const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),
+            //   ]),
+            // ),
             FancyButton(
-              text: "Recommencer",
+              text: "niveaux",
               //onTap: () => Get.to(StartScreen()),
               //onTap: () => Get.off(Niveau1Page()),
               onTap: () async {
                 await _qnController.resetQuiz();
-                Get.to(Niveau1Page());
+                Get.off(ListeNiveau());
               },
-              gradient: LinearGradient(colors: [
-                const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
-                const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),
-              ]),
+              gradient: LinearGradient(
+                colors: [
+                  const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
+                  const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),
+                ],
+              ),
             ),
             SizedBox(
-              height: 50,
+              height: 25,
             ),
             FancyButton(
               text: "Menu Principal",
@@ -105,10 +119,12 @@ class Score1 extends StatelessWidget {
                 await _qnController.resetQuiz();
                 Get.off(StartScreen());
               },
-              gradient: LinearGradient(colors: [
-                const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
-                const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),
-              ]),
+              gradient: LinearGradient(
+                colors: [
+                  const Color.fromARGB(255, 128, 3, 128).withValues(alpha: 0.5),
+                  const Color.fromARGB(255, 244, 2, 195).withValues(alpha: 0.3),
+                ],
+              ),
             ),
           ],
         ),
