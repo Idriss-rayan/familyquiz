@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'niveau1/congrat_page.dart';
-import 'niveau1/score1.dart';
 import 'niveau2/score2.dart';
 
 class Controller extends GetxController with SingleGetTickerProviderMixin {
