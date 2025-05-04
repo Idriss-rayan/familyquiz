@@ -1,4 +1,5 @@
 import 'package:familyquiz/controllers/question_controller.dart';
+import 'package:familyquiz/niveau/bar.dart';
 import 'package:familyquiz/niveau/niveau1/question1_card.dart';
 import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
 import 'package:flutter/material.dart';
@@ -30,13 +31,14 @@ class Niveau1Page extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   child: const progressBar(),
                 ),
-                SizedBox(height: 20),
-                Obx(
-                  () => Center(
-                    child: Text("${_questionController.questionNumber.value}"),
-                  ),
-                ),
-                SizedBox(height: 20),
+                // SizedBox(height: 5),
+                // Obx(
+                //   () => Center(
+                //     child: Text("${_questionController.questionNumber.value}"),
+                //   ),
+                // ),
+                BarNote(),
+                SizedBox(height: 5),
                 Expanded(
                   child: PageView.builder(
                     physics: NeverScrollableScrollPhysics(),

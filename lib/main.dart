@@ -1,4 +1,3 @@
-import 'package:familyquiz/auth/auth_gate.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';

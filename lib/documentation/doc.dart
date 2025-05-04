@@ -14,7 +14,7 @@ class Doc extends StatefulWidget {
 }
 
 class _DocState extends State<Doc> {
-  final PageController _pagecontroller = PageController();
+  //final PageController _pagecontroller = PageController();
   // logout
   void signout() async {
     try {

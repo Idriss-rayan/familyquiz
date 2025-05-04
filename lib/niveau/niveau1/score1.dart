@@ -1,14 +1,11 @@
 import 'dart:ui';
 import 'package:familyquiz/controllers/question_controller.dart';
 import 'package:familyquiz/niveau/liste_niveau.dart';
-import 'package:familyquiz/niveau/niveau1/niveau1_page.dart';
 import 'package:familyquiz/welcome/fancy_button.dart';
 import 'package:familyquiz/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../niveau2/niveau2_page.dart';
 
 class Score1 extends StatelessWidget {
   final int score;

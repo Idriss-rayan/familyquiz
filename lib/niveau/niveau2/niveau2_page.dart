@@ -1,3 +1,4 @@
+import 'package:familyquiz/niveau/bar.dart';
 import 'package:familyquiz/niveau/controller.dart';
 import 'package:familyquiz/niveau/niveau2/question2_card.dart';
 import 'package:familyquiz/screens/quiz/components/progress_bar.dart';
@@ -26,16 +27,13 @@ class Niveau2Page extends StatelessWidget {
           children: [
             Column(
               children: [
+                SizedBox(height: 50),
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: const progressBar(),
                 ),
                 SizedBox(height: 20),
-                Obx(
-                  () => Center(
-                    child: Text("${_qController.questionNumber.value}"),
-                  ),
-                ),
+                BarNote(),
                 SizedBox(height: 20),
                 Expanded(
                   child: PageView.builder(

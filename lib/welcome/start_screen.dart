@@ -46,7 +46,7 @@ class StartScreen extends StatelessWidget {
                 const Text(
                   " Game",
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 10,
                     color: Colors.white70,
                   ),
                 ),
