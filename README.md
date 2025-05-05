@@ -21,7 +21,6 @@ Construite avec **Flutter**, l'application propose une expérience ludique et é
 ## 📸 Captures d'écran
 
 *(Ajoute ici des captures d'écran de ton application pour illustrer l'interface)*
-<img src="captures/1.png" width="400"/>
 <img src="captures/2.png" width="400"/>
 
 ## 🚀 Installation
