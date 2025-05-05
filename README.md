@@ -23,8 +23,8 @@ Construite avec **Flutter**, l'application propose une expérience ludique et é
 *(Ajoute ici des captures d'écran de ton application pour illustrer l'interface)*
 ![Page d'accueil du quiz](captures/1.png)
 ![Page de résultats](captures/2.png)
-<img src="captures/1.png" width="400" />
-<img src="captures/2.png" width="400" />
+<img src="captures/1.png" width="200" height="200" />
+<img src="captures/2.png" width="200" height="200"/>
 
 ## 🚀 Installation
 
